@@ -23,7 +23,7 @@
 
                 </p> --}}
                 <p>
-                    @if (Str::length($about->extrait)>500)
+                    @if (Str::length($about->extrait)>800)
                     {{Str::limit($about->extrait, 1100, '...')}}
                     @else
                     {{$about->extrait}}
@@ -31,7 +31,7 @@
 
                 </p>
                 @endif
-                @if (Str::length($about->extrait)>890)
+                @if (Str::length($about->extrait)>800)
                      <a href="#" data-bs-toggle="modal" data-bs-target="#modal-read-more" class="read">@lang('info.apropo.accueilBtn')</a>
 
                 @endif
@@ -57,10 +57,10 @@
                     <span>@lang('info.apropo.s11'){{ !empty($about->nbrexperience)?$about->nbrexperience>2?'s':'':'' }}</span>
                 </div>
             </div>
-            <div class="row mt-3 g-3 block-hidden2">
+            <div class="mt-3 row g-3 block-hidden2">
                 <div class="col-lg-12">
                     <div class="card-object">
-                        <div class="text-star block">
+                        <div class="block text-star">
                             <h5>{{ !empty($about->titreNosValeurs)?$about->titreNosValeurs:'' }}</h5>
                             <p>{{ !empty($about->slogant)?$about->slogant:'' }}</p>
                         </div>
