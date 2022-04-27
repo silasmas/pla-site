@@ -1,7 +1,7 @@
 <footer>
     <div class="pb-5 container-fluid">
-      <div class="row">
-        <div class="col-lg-3 col-md-6">
+      <div class="row justify-content-center">
+        <div class="col-lg-5 col-md-6">
           <div class="text-star">
             <a href="#" class="logo">
               <img src="{{ asset('assets/images/PLA_logo1.png') }}" alt="">
@@ -33,7 +33,7 @@
             @endif
           </div>
         </div>
-        <div class="col-lg-3 col-md-6">
+        <div class="col-lg-4 col-md-6">
           <div class="text-white text-star">
             <h4>@lang('info.footer.contact')</h4>
             @if (!empty($accueil->adresse))
@@ -104,15 +104,15 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-3 col-md-6">
+        {{-- <div class="col-lg-3 col-md-6">
           <div class="text-white text-star">
             <h4>NewsLetter</h4>
-            {{-- <p>@lang('info.footer.msgNewsletter')</p> --}}
+            <p>@lang('info.footer.msgNewsletter')</p>
             <div class="col-lg-12">
             </div>
             <div class="col-lg-10">
             </div>
-            {{-- <form action="" id="formnewsletter" data-parsley-validate>
+            <form action="" id="formnewsletter" data-parsley-validate>
                 @csrf
               <div class="form-group row g-3">
                 <div class="col-lg-12">
@@ -123,10 +123,10 @@
                   <button class="btn" id="btNewsletter">@lang('info.footer.btnSouscription') <i class="fas fa-paper-plane ps-1"></i></button>
                 </div>
               </div>
-            </form> --}}
+            </form>
           </div>
         </div>
-      </div>
+      </div> --}}
     </div>
   </footer>
   <div class="bottombar">
