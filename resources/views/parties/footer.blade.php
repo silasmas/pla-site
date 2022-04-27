@@ -1,5 +1,5 @@
 <footer>
-    <div class="container-fluid pb-5">
+    <div class="pb-5 container-fluid">
       <div class="row">
         <div class="col-lg-3 col-md-6">
           <div class="text-star">
@@ -34,7 +34,7 @@
           </div>
         </div>
         <div class="col-lg-3 col-md-6">
-          <div class="text-star text-white">
+          <div class="text-white text-star">
             <h4>@lang('info.footer.contact')</h4>
             @if (!empty($accueil->adresse))
             <p>
@@ -56,8 +56,8 @@
             @endif
           </div>
         </div>
-        <div class="col-lg-3 col-md-6 mr-5">
-          <div class="text-star text-white">
+        <div class="mr-5 col-lg-3 col-md-6">
+          <div class="text-white text-star">
             <h4>@lang('info.footer.menu')</h4>
             <div class="row g-lg-3 g-3">
                 @if(!empty($accueil->p1))
@@ -105,11 +105,10 @@
           </div>
         </div>
         <div class="col-lg-3 col-md-6">
-          <div class="text-star text-white">
+          <div class="text-white text-star">
             <h4>NewsLetter</h4>
             {{-- <p>@lang('info.footer.msgNewsletter')</p> --}}
             <div class="col-lg-12">
-              <script type="text/javascript" src="https://app.getresponse.com/view_webform_v2.js?u=Qje2L&webforms_id=hiSDL" data-webform-id="hiSDL"></script>
             </div>
             <div class="col-lg-10">
             </div>
