@@ -76,7 +76,7 @@ class AboutController extends Controller
             $request->slogant==""? $line->slogant=$line->slogant:
                                 $line->slogant=['fr' =>$request->slogant,'en' =>$request->slogant_en];
             $request->contenu==""? $line->contenu=$line->contenu:
-                                $line->contenu=['fr' =>$request->contenu,'en' =>$request->contenu_en];
+                                $line->contenu=['fr' =>$request->contenu,'en' =>$request->contenu_en]; 
             $request->temps==""? $line->temps=$line->temps:
                                 $line->temps=['fr' =>$request->temps,'en' =>$request->temps_en];
             $request->titreNosValeurs==""? $line->titreNosValeurs=$line->titreNosValeurs:

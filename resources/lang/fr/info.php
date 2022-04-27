@@ -89,7 +89,7 @@ return [
         diligence les évolutions constantes des cadres juridiques et réglementaires de nos
         différents secteurs d’intervention.',
         'accueilP3'=>'Avec une équipe multiculturelle et multidisciplinaire respectant les standards internationaux de leurs professions, nous fournissons à nos clients une assistance et une représentation efficaces avec proactivité et une attention particulière à chaque détail dans la gestion des intérêts de nos clients.  ',
-        'accueilBtn'=>'Savoir plus',
+        'accueilBtn'=>'Lire plus',
         's5'=>'Intellectual Property',
         's6'=>'Immigration',
         's7'=>'Project Finance',
