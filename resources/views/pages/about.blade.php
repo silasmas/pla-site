@@ -23,8 +23,8 @@
 
                 </p> --}}
                 <p>
-                    @if (Str::length($about->extrait)>800)
-                    {!! Str::limit($about->contenu, 1700, '...')!!}
+                    @if (Str::length($about->contenu)>800)
+                    {!! Str::limit($about->contenu, 1800, '...')!!}
                     @else
                     {{$about->extrait}}
                     @endif
