@@ -155,7 +155,7 @@
                                         @endif
                                     </p>
                                 </div>
-                                <div class="col-sm-6">
+                                <div class="col-sm-6"> 
                                     <p>
                                         <h3 class="">Apropo du cabinet (EN)</h3>
                                         @if (!empty($about->contenu))
