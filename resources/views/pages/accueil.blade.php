@@ -27,7 +27,7 @@
                             <div class="container">
                                 <div class="row">
                                     <div class="col-lg-12">
-                                        <div class="text-star text-white">
+                                        <div class="text-white text-star">
                                             <h2>{{ $s->titresmall }}</h2>
                                             <h1>{{$s->titrebig}}</h1>
                                             <p>{{Str::length($s->resume)>120?Str::substr(strip_tags($s->resume),0, 120).'...':$s->resume}}</p>
@@ -96,7 +96,7 @@
                     <div class="col-lg-6 col-sm-6 col-bar">
                         <h2>{{ !empty($about->quisommenous)?$about->quisommenous:'' }}</h2>
                         <h1>{{ !empty($about->titrecabinet)?$about->titrecabinet:'' }} </h1>
-                        <p>{!! !empty($about->extrait)?Str::limit($about->extrait, 500, '...'):''!!}</p>
+                        <p>{!! !empty($about->extrait)?Str::limit($about->contenu, 700, '...'):''!!}</p>
 
                         <a href="{{ route('about') }}" class="btn text-with" >@lang('info.apropo.accueilBtn')</a>
                     </div>
