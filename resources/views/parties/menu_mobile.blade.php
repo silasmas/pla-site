@@ -54,7 +54,7 @@
             <span>{{ $accueil->telphone }}</span>
         </p>
         @endif
-            {{--  <div class="net-work d-flex justify-content-center mt-4">
+             <div class="net-work d-flex justify-content-center mt-4">
                 @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
                 <p class="mb-0">
                     <a rel="alternate" hreflang="{{ $localeCode }}"
@@ -64,7 +64,7 @@
                     </a>
                 </p>
                 @endforeach
-            </div>  --}}
+            </div> 
         @if (!empty($accueil->email))
                         <p class="mb-0">
                             <i class="fas fa-envelope"></i>
