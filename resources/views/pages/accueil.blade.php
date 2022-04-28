@@ -96,9 +96,15 @@
                     <div class="col-lg-6 col-sm-6 col-bar">
                         <h2>{{ !empty($about->quisommenous)?$about->quisommenous:'' }}</h2>
                         <h1>{{ !empty($about->titrecabinet)?$about->titrecabinet:'' }} </h1>
-                        <p>{!! !empty($about->extrait)?Str::limit($about->contenu, 900, '...'):''!!}</p>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <p>{!! !empty($about->extrait)?Str::limit($about->contenu,720, '...'):''!!}</p>
+                            </div>
+                            <div class="col-sm-12">
+                                <a href="{{ route('about') }}" class="btn text-with" >@lang('info.apropo.accueilBtn')</a>
+                            </div>
+                        </div>
 
-                        <a href="{{ route('about') }}" class="btn text-with" >@lang('info.apropo.accueilBtn')</a>
                     </div>
                 </div>
             </div>
