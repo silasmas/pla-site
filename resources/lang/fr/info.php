@@ -23,6 +23,9 @@ return [
     ],
     'autres' =>[
         'teamDownload'=>'Télécharger CV',
+        'viewBy'=>'Afficher par',
+        'burea'=>'Bureau ',
+        'categorie'=>'Catégories ',
         'lirePlus'=>'Lire plus',
         'teamViewmore'=>'Plus d`\'Avocats'
 

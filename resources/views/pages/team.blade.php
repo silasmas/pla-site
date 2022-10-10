@@ -33,9 +33,9 @@
                     <div class="col-lg-9">
                         <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100">
                             <div id="slider-carousel" class="owl-carousel carousel-mobil">
-                                  
+
                                 @forelse ($avocat as $nom=>$av)
-                              
+
                                     @foreach($av as $eachyear)
                                         <div class="item">
                                             <div class="col-lg-4 {{$eachyear->fonction->fonction}}">
@@ -50,7 +50,7 @@
                                                             <span class="readMore">@lang('info.apropo.accueilBtn')</span>
                                                         </div>
                                                     </div>
-                                                    
+
                                                 </a>
                                             </div>
                                         </div>
@@ -125,9 +125,9 @@
                     </div>
                     <div class="col-lg-3">
                            <div class="card card-exp mt-4">
-                            <h3>Afficher par:</h3>
+                            <h3>@lang("info.autres.viewBy")</h3>
                             <hr>
-                            <h4 class="mb-4">Bureau :</h4>
+                            <h4 class="mb-4">@lang('info.apropo.burea'):</h4>
                             <select class="select2_demo_3 form-control" id="teamByBureau">
                                 <option></option>
                                 @forelse ($bureau as $b)
@@ -139,7 +139,7 @@
 
                             </select>
                             <hr>
-                            <h4 class="">Catégories:</h4>
+                            <h4 class="">@lang('info.apropo.categorie'):</h4>
                             <div class="link-category">
                                 <a href="{{ route('team') }}">@lang('info.team.all')<span class="num">()</span></a>
                                 @forelse ($fonction as  $cat)
