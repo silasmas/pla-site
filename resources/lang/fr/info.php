@@ -27,7 +27,7 @@ return [
         'bureau'=>'Bureau ',
         'categorie'=>'Catégories ',
         'lirePlus'=>'Lire plus',
-        'teamViewmore'=>'Plus d`\'Avocats'
+        'teamViewmore'=>'Plus d\'Avocats'
 
     ],
 

@@ -54,16 +54,16 @@
                                         </div>
                                     </div>
                                     @empty
-                                    <h2 class="mb-1">Pas des publication pour le moment</h2>
+                                    <h2 class="mb-1">@lang("info.titrepage.videInfo")</h2>
                                 @endforelse
                             </div>
                         </div>
                         <div class="col-lg-3 order-2">
 
                             <div class="card-exp">
-                                <h3>Afficher par:</h3>
+                                <h3>@lang('info.autres.bureau'):</h3>
                                 <hr>
-                                <h4 class="">Catégories:</h4>
+                                <h4 class="">@lang('info.autres.categorie'):</h4>
                                 <div class="link-category">
                                     <ul id="portfolio-flters">
                                         <li data-filter="*" class="filter-active">@lang('info.team.all')</li>
