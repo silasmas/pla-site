@@ -119,7 +119,7 @@
                         </div>
                     </div>
                     <div class="card card-exp block-hidden2">
-                            <h4>Plus d'Avocats</h4>
+                            <h4>@lang("info.autres.teamViewmore")</h4>
                             <div class="link-category">
                                 @forelse($avocats as $value)
                                 <a href="{{ route('detailTeam',['id'=>$value->id]) }}" class="link-avocat">
