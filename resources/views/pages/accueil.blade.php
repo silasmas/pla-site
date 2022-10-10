@@ -134,7 +134,7 @@
                                     <h5>{{ $av->prenom.' '.$av->nom }}</h5>
                                     {{-- <span>{{ $av->fonction->fonction }}</span> --}}
                                 </div>
-                    </div> 
+                    </div>
                     </a>
                 </div>
                 @empty
@@ -194,7 +194,7 @@
                                     <p>
                                         {!! strlen($value->contenu) > 200 ? substr(strip_tags($value->contenu),0,200).'...' : $value->contenu!!}
                                     </p>
-                                    <a href="{{ route('detailPublication',['id'=>$value->id]) }}">Lire Plus <i
+                                    <a href="{{ route('detailPublication',['id'=>$value->id]) }}">@lang('info.apropo.accueilBtn')<i
                                             class="fas fa-angle-right"></i></a>
                                 </div>
                             </div>

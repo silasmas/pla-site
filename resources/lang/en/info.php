@@ -25,6 +25,7 @@ return [
     'autres' =>[
         'teamDownload'=>'Download CV',
         'viewBy'=>'View by ',
+        'nos'=>'Our ',
         'bureau'=>'Desk ',
         'categorie'=>'Categorys ',
         'lirePlus'=>'Read more',

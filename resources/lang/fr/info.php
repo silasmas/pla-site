@@ -25,6 +25,7 @@ return [
         'teamDownload'=>'Télécharger CV',
         'viewBy'=>'Afficher par ',
         'bureau'=>'Bureau ',
+        'nos'=>'Nos ',
         'categorie'=>'Catégories ',
         'lirePlus'=>'Lire plus',
         'teamViewmore'=>'Plus d\'Avocats'

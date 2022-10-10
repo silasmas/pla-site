@@ -16,7 +16,7 @@
                             <div class="row">
                                 <div class="col-lg-12">
                                     <div class="text-star">
-                                        <h2 class="mb-1">Nos</h2>
+                                        <h2 class="mb-1">@lang('info.autres.nos')</h2>
                                         <h1> <h1>{{ $publication->count() }} {{ $publication->count()>1?'Publications':'Publication' }} </h1></h1>
                                     </div>
                                 </div>
@@ -61,7 +61,7 @@
                         <div class="col-lg-3 order-2">
 
                             <div class="card-exp">
-                                <h3>@lang('info.autres.bureau'):</h3>
+                                <h3>@lang('info.autres.viewBy'):</h3>
                                 <hr>
                                 <h4 class="">@lang('info.autres.categorie'):</h4>
                                 <div class="link-category">
