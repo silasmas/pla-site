@@ -16,95 +16,97 @@
             <div class="tab-content">
                 <div id="tab_publication" class="tab-pane active">
                     <div class="panel-body">
-                            @forelse ($publication as $pub)
-                            <div class="col-md-4">
-                                <div class="ibox">
-                                    <div class="ibox-content product-box">
+                        @forelse ($publication as $pub)
+                        <div class="col-md-4">
+                            <div class="ibox">
+                                <div class="ibox-content product-box">
 
-                                        <div class="product-imitation" style="padding: 2px 0 !important;">
-                                            <img src="{{'../storage/'.$pub->cover}}" class="img-responsive"
-                                                style="height: 250px !important;" height="50" />
+                                    <div class="product-imitation" style="padding: 2px 0 !important;">
+                                        <img src="{{'../storage/'.$pub->cover}}" class="img-responsive"
+                                            style="height: 250px !important;" height="50" />
+                                    </div>
+                                    <div class="product-desc">
+                                        <span class="product-price">
+                                            {{ $pub->created_at->format('d').'-'.$pub->created_at->format('M') }}
+                                        </span>
+                                        <small class="text-muted">{{ $pub->categorie->nom }}</small>
+                                        <a href="{{ route('admin_detailPublication',['id'=>$pub->id]) }}"
+                                            class="product-name">
+                                            {{ $pub->titre }}</a>
+
+
+
+                                        <div class="small m-t-xs">
+                                            {{-- {!! strlen($pub->contenu) > 200 ? substr($pub->contenu,0,200).'...' :
+                                            $pub->contenu!!} --}}
+                                            {!! strlen($pub->contenu) > 200 ?
+                                            substr(strip_tags($pub->contenu),0,200).'...' : $pub->contenu!!}
                                         </div>
-                                        <div class="product-desc">
-                                            <span class="product-price">
-                                                {{ $pub->created_at->format('d').'-'.$pub->created_at->format('M')  }}
-                                            </span>
-                                            <small class="text-muted">{{ $pub->categorie->nom }}</small>
+                                        <div class="m-t text-righ">
+
                                             <a href="{{ route('admin_detailPublication',['id'=>$pub->id]) }}"
-                                                class="product-name">
-                                                {{ $pub->titre }}</a>
-
-
-
-                                            <div class="small m-t-xs">
-                                                {{-- {!! strlen($pub->contenu) > 200 ? substr($pub->contenu,0,200).'...' : $pub->contenu!!} --}}
-                                                {!! strlen($pub->contenu) > 200 ? substr(strip_tags($pub->contenu),0,200).'...' : $pub->contenu!!}
-                                            </div>
-                                            <div class="m-t text-righ">
-
-                                                <a href="{{ route('admin_detailPublication',['id'=>$pub->id]) }}"
-                                                    class="btn btn-xs btn-outline btn-primary">detail <i
-                                                        class="fa fa-long-arrow-right"></i> </a>
-                                            </div>
+                                                class="btn btn-xs btn-outline btn-primary">detail <i
+                                                    class="fa fa-long-arrow-right"></i> </a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            @empty
-                            <span class="badge badge-danger">Pas d'information disponible</span><br>
-                            @endforelse
+                        </div>
+                        @empty
+                        <span class="badge badge-danger">Pas d'information disponible</span><br>
+                        @endforelse
                     </div>
                 </div>
                 <div id="tab_categorie" class="tab-pane">
                     <div class="panel-body">
-<div class="table-responsive">
-                        <table class="table table-striped table-bordered table-hover dataTables-example">
-                            <thead>
-                                <tr>
-                                    <th>#</th>
-                                    <th>Nom de la catégorie</th>
-                                    <th>Date d'enregistrement</th>
-                                    <th>Options</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                @forelse ($categorie as $i)
-                                <tr class="gradeX">
-                                    <td>{{ $i->id }}</td>
-                                    <td>{{ $i->nom }}
-                                    </td>
-                                    <td> {{ \Carbon\Carbon::parse( $i->created_at)->isoFormat('LLLL') }}</td>
-                                    <td class="center">
-                                        <p>
-                                            <a href="{{ $i->id }}" id="deleteCat"
-                                                class="btn btn-outline btn-danger dim">
-                                                <i class="fa fa-trash"></i>
-                                            </a>
-                                            <a href="{{route('editCat',$i->id)}}"
-                                                class="btn btn-outline btn-warning dim">
-                                                 <i class="fa fa-edit"></i>
-                                            </a>
+                        <div class="table-responsive">
+                            <table class="table table-striped table-bordered table-hover dataTables-example">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Nom de la catégorie</th>
+                                        <th>Date d'enregistrement</th>
+                                        <th>Options</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @forelse ($categorie as $i)
+                                    <tr class="gradeX">
+                                        <td>{{ $i->id }}</td>
+                                        <td>{{ $i->nom }}
+                                        </td>
+                                        <td> {{ \Carbon\Carbon::parse( $i->created_at)->isoFormat('LLLL') }}</td>
+                                        <td class="center">
+                                            <p>
+                                                <a href="{{ $i->id }}" id="deleteCat"
+                                                    class="btn btn-outline btn-danger dim">
+                                                    <i class="fa fa-trash"></i>
+                                                </a>
+                                                <a href="{{route('editCat',$i->id)}}"
+                                                    class="btn btn-outline btn-warning dim">
+                                                    <i class="fa fa-edit"></i>
+                                                </a>
 
-                                        </p>
-                                    </td>
+                                            </p>
+                                        </td>
 
-                                </tr>
-                                @empty
+                                    </tr>
+                                    @empty
 
-                                @endforelse
+                                    @endforelse
 
 
-                            </tbody>
-                            <tfoot>
-                                <tr>
-                                    <th>#</th>
-                                    <th>Nom de la catégorie</th>
-                                    <th>Date d'enregistrement</th>
-                                    <th>Options</th>
-                                </tr>
-                            </tfoot>
-                        </table>
-                    </div>
+                                </tbody>
+                                <tfoot>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Nom de la catégorie</th>
+                                        <th>Date d'enregistrement</th>
+                                        <th>Options</th>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>

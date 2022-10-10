@@ -65,7 +65,7 @@
                                                 {{ strlen($value->titre) > 50 ? substr($value->titre,0,50).'...' : $value->titre}}
                                             </h5>
                                             <p>{{ strlen(strip_tags($value->contenu)) > 250 ? substr(strip_tags($value->contenu),0,250).'...': strip_tags($value->contenu)}}</p>
-                                   <a href="{{ route('detailPublication',['id'=>$value->id]) }}">Lire Plus <i class="fas fa-angle-right"></i></a>
+                                   <a href="{{ route('detailPublication',['id'=>$value->id]) }}">@lang("info.autres.lirePlus") <i class="fas fa-angle-right"></i></a>
                                         </div>
                                 </div>
                             </div>
@@ -76,7 +76,7 @@
                         </div>
                     </div>
                     <div class="card card-exp block-hidden1">
-                        <h4>Plus d'Avocats</h4>
+                        <h4>@lang("info.autres.teamViewmore")</h4>
                         <div class="link-category">
                             @forelse($avocats as $value)
                             <a href="{{ route('detailTeam',['id'=>$value->id]) }}" class="link-avocat">
@@ -113,7 +113,7 @@
                         <div class="text-center text-center-md">
                           <h5>{{ $avocat->prenom.' '.$avocat->nom }}</h5>
                           <span>{{ $avocat->fonction->fonction}}</span>
-                          @if ($avocat->pdfbio)                              
+                          @if ($avocat->pdfbio)
                           <a href="" id="{{ $avocat->pdfbio}}" class="btn-download"><i class="fas fa-download"></i> Télécharger CV</a>
                           @endif
                         </div>

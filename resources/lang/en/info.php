@@ -22,6 +22,12 @@ return [
         'Presentation'=>'Presentation'
 
     ],
+    'autres' =>[
+        'teamDownload'=>'Download CV',
+        'lirePlus'=>'Read more',
+        'teamViewmore'=>'More Lawyers'
+
+    ],
     /*
     Menu
     */
