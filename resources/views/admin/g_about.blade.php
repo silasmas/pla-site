@@ -33,7 +33,7 @@
                                         <p>
                                             <h3 class="badge badge-white">Nom du cabinet :</h3>
                                             @if (!empty($about->titrecabinet))
-                                            <span class="badge badge-primary">{{ $about->titrecabinet }} (FR)</span><br>
+                                            <span class="badge badge-primary">{{ $about->titrecabinet }} (FR)</span>
                                             <span class="badge badge-primary">{{ $about->getTranslation('titrecabinet','en') }} (EN)</span>
                                             <small class="btn btn-danger btn-circle">
                                                 <a href="tel" title="titrecabinet" id='delete'><i class="fa fa-trash"></i></a>
@@ -45,7 +45,7 @@
                                         <p>
                                             <h3 class="badge badge-white">Slogan :</h3>
                                             @if (!empty($about->slogant))
-                                            <span class="badge badge-primary">{!! Str::length($about->slogant)>65?Str::substr($about->slogant, 0, 65).'...' :$about->slogant!!} (FR)</span><br>
+                                            <span class="badge badge-primary">{!! Str::length($about->slogant)>65?Str::substr($about->slogant, 0, 65).'...' :$about->slogant!!} (FR)</span>
                                             <span class="badge badge-primary">{!! Str::length($about->slogant)>65?Str::substr($about->getTranslation('slogant','en'), 0, 65).'...' :$about->slogant!!} (EN)</span>
                                             <small class="btn btn-danger btn-circle">
                                                 <a href="tel" title="slogant" id='delete'><i class="fa fa-trash"></i></a>
@@ -75,7 +75,7 @@
                                             <h3 class="badge badge-white">Nombre d'experience :</h3>
                                             @if (!empty($about->nbrexperience))
 
-                                            <span class="badge badge-primary">{{ $about->nbrexperience }}</span><br>
+                                            <span class="badge badge-primary">{{ $about->nbrexperience }}</span>
                                             {{-- <span class="badge badge-primary">{{ $about->getTranslation('nbrexperience','en') (EN) }}</span> --}}
                                             <small class="btn btn-danger btn-circle">
                                                 <a href="menu" title="nbrexperience" id='delete'><i class="fa fa-trash"></i></a>
@@ -87,7 +87,7 @@
                                         <p>
                                             <h3 class="badge badge-white">Temps d'experience :</h3>
                                             @if (!empty($about->temps))
-                                            <span class="badge badge-primary">{{ $about->temps }} (FR)</span><br>
+                                            <span class="badge badge-primary">{{ $about->temps }} (FR)</span>
                                             <span class="badge badge-primary">{{ $about->getTranslation('temps','en') }} (EN)</span>
                                             <small class="btn btn-danger btn-circle">
                                                 <a href="tel" title="temps" id='delete'><i class="fa fa-trash"></i></a>
