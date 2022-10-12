@@ -17,10 +17,10 @@
                         <div class='row'>
                             <div class="col-sm-12">
                                 <p>
-                                    @if (Str::length($about->contenu) > 800)
-                                        {!! Str::limit($about->contenu, 1900, '...') !!}
+                                    @if (Str::length($about->extrait) > 800)
+                                        {!! Str::limit($about->extrait, 1900, '...') !!}
                                     @else
-                                        {{ $about->contenu }}
+                                        {{ $about->extrait }}
                                     @endif
 
                                 </p>
