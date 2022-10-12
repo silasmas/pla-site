@@ -200,7 +200,7 @@
                             </div>
                         </div>
                         @empty
-                        <p class="text-danger">@lang('info.titrepage.videInfo')</p>
+                        {{-- <p class="text-danger">@lang('info.titrepage.videInfo')</p> --}}
                         @endforelse
 
                     </div>
