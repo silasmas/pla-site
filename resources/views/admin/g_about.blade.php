@@ -34,6 +34,7 @@
                                             <h3 class="badge badge-white">Nom du cabinet :</h3>
                                             @if (!empty($about->titrecabinet))
                                             <span class="badge badge-primary">{{ $about->titrecabinet }}</span>
+                                            <span class="badge badge-primary">{{ $about->getTranslation('titrecabinet','en') }}</span>
                                             <small class="btn btn-danger btn-circle">
                                                 <a href="tel" title="titrecabinet" id='delete'><i class="fa fa-trash"></i></a>
                                             </small><br><br>
@@ -120,7 +121,7 @@
                                     </div>
                                 </div>
                                 <hr>
-                                <div class="row"> 
+                                <div class="row">
                                     <div class="col-sm-6">
                                         <h3 class="">Extrait de la description (FR) :</h3>
                                         <small class="btn btn-danger btn-circle">
@@ -130,7 +131,7 @@
                                             {{$about->getTranslation('extrait','fr')}}
                                         </p>
 
-                                    </div> 
+                                    </div>
                                     <div class="col-sm-6">
                                         <h3 class="">Extrait de la description (EN) :</h3>
                                         <small class="btn btn-danger btn-circle">
@@ -140,8 +141,8 @@
                                             {{$about->getTranslation('extrait','en')}}
                                         </p>
 
-                                    </div> 
-                                </div> 
+                                    </div>
+                                </div>
                                 <div class="col-sm-6">
                                     <p>
                                         <h3 class="">Apropo du cabinet (FR)</h3>
@@ -155,7 +156,7 @@
                                         @endif
                                     </p>
                                 </div>
-                                <div class="col-sm-6"> 
+                                <div class="col-sm-6">
                                     <p>
                                         <h3 class="">Apropo du cabinet (EN)</h3>
                                         @if (!empty($about->contenu))
