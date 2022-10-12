@@ -49,8 +49,8 @@
                                     <i class="fas fa-play"></i>
                                 </span>
                             </div> -->
-                        {{-- <img src="{{ !empty($about->photoabout) ? asset('storage/' . $about->photoabout) : asset('img/default.png') }}" --}}
-                            alt="img">
+                        {{-- <img src="{{ !empty($about->photoabout) ? asset('storage/' . $about->photoabout) : asset('img/default.png') }}"
+                            alt="img">--}}
                         <div class="block-badge">
                             <span>{{ !empty($about->nbrexperience) ? $about->nbrexperience : '' }}</span>
                             <span>{{ !empty($about->temps) ? $about->temps : '' }}</span>
