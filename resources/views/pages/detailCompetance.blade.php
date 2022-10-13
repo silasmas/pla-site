@@ -15,8 +15,8 @@
                         <div class="list-group card-exp" id="list-tab" role="tablist">
                             <h4 class="mb-3">@lang('info.domaine.menu')</h4>
                             @forelse ($domaine as $se)
-                            <a class="list-group-item list-group-item-action {{ $_GET['id']==$se->id?'show active':''}} scrollTop"
-                                 id="list-home-list" data-bs-toggle="list" href="{{"#".$se->id}}" role="tab" aria-controls="{{ $se->id }}">
+                            <a class="list-group-item list-group-item-action {{ str_replace(" ","",$_GET['p'])==$se->titre1?'show active':''}} scrollTop"
+                                 id="list-home-list" data-bs-toggle="list" href="{{"#".$se->titre1}}" role="tab" aria-controls="{{ $se->id }}">
                                  {{ $se->titre1 }}</a>
                             @empty
 
@@ -27,8 +27,8 @@
                             <div class="tab-content" id="nav-tabContent">
                                 <!-- SECTEURS -->
                                 @forelse ($domaine as $se)
-                                <div class="tab-pane fade  {{ $_GET['id']==$se->id?'show active':''}} "
-                                    id="{{$se->id}}" role="tabpanel" aria-labelledby="list-home-list">
+                                <div class="tab-pane fade  {{ str_replace(" ","",$_GET['p'])==$se->titre1?'show active':''}} "
+                                    id="{{$se->titre1}}" role="tabpanel" aria-labelledby="list-home-list">
                                     <div class="text-star">
                                             <div class="row ">
                                                 <div class="col-lg-6 ">
