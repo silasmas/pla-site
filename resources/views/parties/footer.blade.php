@@ -8,7 +8,7 @@
             </a>
             <p>
                 @if (!empty($accueil->txtfooter))
-                    {!! strip_tags($accueil->txtfooter) !!}
+                    {!! $accueil->txtfooter !!}
                  @endif
             </p>
             @if (!empty($accueil->facebook))
