@@ -98,7 +98,7 @@
                         <h1>{{ !empty($about->titrecabinet)?$about->titrecabinet:'Vide' }} </h1>
                         <div class="row">
                             <div class="col-sm-12">
-                                <p>{!! !empty($about->extrait)?Str::limit($about->extrait,450, '...'):'Vide '!!}</p>
+                                <p>{!! !empty($about->extrait)?Str::limit($about->contenu,450, '...'):'Vide '!!}</p>
                             </div>
                             <div class="col-sm-12">
                                 <a href="{{ route('about') }}" class="btn text-with" >@lang('info.apropo.accueilBtn')</a>
