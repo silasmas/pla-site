@@ -1,7 +1,7 @@
 <footer>
     <div class="pb-5 container-fluid">
       <div class="row justify-content-center">
-        <div class="col-lg-5 col-md-6">
+        <div class="col-lg-3 col-md-6">
           <div class="text-star">
             <a href="#" class="logo">
               <img src="{{ asset('assets/images/PLA_logo1.png') }}" alt="">
@@ -33,7 +33,7 @@
             @endif
           </div>
         </div>
-        <div class="col-lg-4 col-md-6">
+        <div class="col-lg-6 col-md-6">
           <div class="text-white text-star">
             <h4>@lang('info.footer.contact')</h4>
             @if (!empty($accueil->adresse))
