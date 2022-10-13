@@ -20,7 +20,7 @@
                                     @if (Str::length($about->contenu) > 800)
                                         {!! Str::limit($about->contenu, 1900, '...') !!}
                                     @else
-                                        {{ $about->contenu }}
+                                        {!! $about->contenu  !!}
                                     @endif
 
                                 </p>
