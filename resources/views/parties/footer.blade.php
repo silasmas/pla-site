@@ -33,7 +33,7 @@
             @endif
           </div>
         </div>
-        <div class="col-lg-6 col-md-6">
+        <div class="col-lg-6 col-md-6 text-center">
           <div class="text-white text-star">
             <h4>@lang('info.footer.contact')</h4>
             @if (!empty($accueil->adresse))
