@@ -94,11 +94,11 @@
                         </div>
                     </div>
                     <div class="col-lg-6 col-sm-6 col-bar">
-                        <h2>{{ !empty($about->quisommenous)?$about->quisommenous:'' }}</h2>
-                        <h1>{{ !empty($about->titrecabinet)?$about->titrecabinet:'' }} </h1>
+                        <h2>{{ !empty($about->quisommenous)?$about->quisommenous:'Vide' }}</h2>
+                        <h1>{{ !empty($about->titrecabinet)?$about->titrecabinet:'Vide' }} </h1>
                         <div class="row">
                             <div class="col-sm-12">
-                                <p>{!! !empty($about->extrait)?Str::limit($about->contenu,900, '...'):''!!}</p>
+                                <p>{!! !empty($about->extrait)?Str::limit($about->contenu,900, '...'):'Vide '!!}</p>
                             </div>
                             <div class="col-sm-12">
                                 <a href="{{ route('about') }}" class="btn text-with" >@lang('info.apropo.accueilBtn')</a>
