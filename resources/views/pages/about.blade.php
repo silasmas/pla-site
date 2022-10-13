@@ -17,8 +17,8 @@
                         <div class='row'>
                             <div class="col-sm-12">
                                 <p>
-                                    @if (Str::length($about->contenu) > 800)
-                                        {!! Str::limit($about->contenu, 1900, '...') !!}
+                                    @if (Str::length($about->contenu) > 600)
+                                        {!! Str::limit($about->contenu, 1000, '...') !!}
                                     @else
                                         {!! $about->contenu  !!}
                                     @endif
