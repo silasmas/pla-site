@@ -13,7 +13,7 @@
                     <h2>{{ !empty($about->quisommenous) ? $about->quisommenous : '' }}</h2>
                     <h1>{{ !empty($about->titrecabinet) ? $about->titrecabinet : '' }}</h1>
 
-                    @if (!empty($about->extrait))
+                    @if (!empty($about->contenu))
                         <div class='row'>
                             <div class="col-sm-12">
                                 <p>
