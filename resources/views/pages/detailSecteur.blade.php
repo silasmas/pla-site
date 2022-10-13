@@ -16,8 +16,8 @@
                         <div class="list-group card-exp" id="list-tab" role="tablist">
                             <h4 class="mb-3">@lang('info.expertises.menu')</h4>
                             @forelse ($secteur as $se)
-                            <a class="list-group-item list-group-item-action {{ str_replace(" ","",$_GET['p'])==str_replace(" ","",$se->titre1)?'show active':''}} scrollTop"
-                                 id="list-home-list" data-bs-toggle="list" href="{{"#".str_replace(" ","",$se->titre1)}}" role="tab" aria-controls="{{ $se->id }}">
+                            <a class="list-group-item list-group-item-action {{ Str::substr($_GET['p'], 0, 3)==Str::substr($se->titre1, 0, 3)?'show active':''}} scrollTop"
+                                 id="list-home-list" data-bs-toggle="list" href="{{"#".Str::substr($se->titre1, 0, 3)}}" role="tab" aria-controls="{{ $se->id }}">
                                  {{ $se->titre1 }}</a>
                             @empty
 
@@ -28,8 +28,8 @@
                             <div class="tab-content" id="nav-tabContent">
                                 <!-- SECTEURS -->
                                 @forelse ($secteur as $se)
-                                <div class="tab-pane fade  {{ str_replace(" ","",$_GET['p'])==str_replace(" ","",$se->titre1)?'show active':''}} "
-                                    id="{{str_replace(" ","",$se->titre1)}}" role="tabpanel" aria-labelledby="list-home-list">
+                                <div class="tab-pane fade  {{ Str::substr($_GET['p'], 0, 3)==Str::substr($se->titre1, 0, 3)?'show active':''}} "
+                                    id="{{Str::substr($se->titre1, 0, 3)}}" role="tabpanel" aria-labelledby="list-home-list">
                                     <div class="text-star">
                                             <div class="row ">
                                                 <div class="col-lg-6 ">
