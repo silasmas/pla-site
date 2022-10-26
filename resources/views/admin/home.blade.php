@@ -40,7 +40,7 @@
                                         <abbr title="Phone">P:</abbr> {{ $av->telephone }}
                                     </address>
                                     <div class="row">
-                                        @if ($av->pdfbio)
+                                        @if ($av->pdfbio && file_exists("storage/".$av->pdfbio))
                                             <small class="col-sm-8 col-sm-offset-2">
                                             <a href="" id="{{ $av->pdfbio}}" class="btn btn-primary btn-rounded btn-block btn-download">
                                                 <i class="fa fa-download"></i>Télécharger CV</a>
@@ -51,7 +51,7 @@
                                                 <i class="fa fa-download"></i>CV Absent</a>
                                            </small>
                                         @endif
-                                        
+
                                     </div>
 
 

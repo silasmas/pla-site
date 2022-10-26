@@ -45,7 +45,7 @@
                                     <h2 class="text-danger text-center">Cet agent n'est pas affecter dans un bureau</h2>
                                 @endforelse
                             @endempty
-                                
+
                             </div>
                         </div>
                     </div>
@@ -82,8 +82,8 @@
                                 {!! $team->biographie !!}
                             </p>
                         </div>
-                        @if ($team->pdfbio)
-                            
+                        @if ($team->pdfbio && file_exists("storage/".$team->pdfbio))
+
                         <a href="" id="{{$team->pdfbio}}" class="btn btn-primary btn-block m btn-download"><i
                                 class="fa fa-download"></i> Télecharger CV</a>
                         @endif
