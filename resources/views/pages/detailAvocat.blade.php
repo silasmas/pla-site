@@ -113,7 +113,7 @@
                         <div class="text-center text-center-md">
                           <h5>{{ $avocat->prenom.' '.$avocat->nom }}</h5>
                           <span>{{ $avocat->fonction->fonction}}</span>
-                          @if ($avocat->pdfbio)
+                          @if ($avocat->pdfbio && file_exists("storage/".$avocat->pdfbio))
                           <a href="" id="{{ $avocat->pdfbio}}" class="btn-download"><i class="fas fa-download"></i> @lang("info.autres.teamDownload")</a>
                           @endif
                         </div>
