@@ -189,7 +189,7 @@ class AvocatController extends Controller
 
             $request->pdfbio==""? $line->pdfbio=$line->pdfbio:$line->pdfbio=$pubpdfnam;
             $request->photo==""? $line->photo=$line->photo:$line->photo=$filenameImg;
-            $request->biographie==""? $line->biographie=$line->biographie:$line->biographie=$request->biographie;
+            $request->biographie==""? $line->biographie=$line->biographie:$line->biographie=['fr' =>$request->biographie,'en' =>$request->biographie_en];
             $request->niveau==""? $line->niveau=$line->niveau:$line->niveau=$request->niveau;
             $request->telephone==""? $line->telephone=$line->telephone:$line->telephone=$request->telephone;
             $request->sexe==""? $line->sexe=$line->sexe:$line->sexe=$request->sexe;
