@@ -5,12 +5,12 @@
 <div class="wrapper wrapper-content animated fadeInRight">
     <div class="row">
         @if(session()->has('message'))
-            <div class="col-md-6 col-md-offset-3" >
-                <div class="alert alert-success alert-dismissable">
-                    <button aria-hidden="true" data-dismiss="alert" class="close" type="button">×</button>
-                    {{session()->get('message')}}
-                </div>
+        <div class="col-md-6 col-md-offset-3">
+            <div class="alert alert-success alert-dismissable">
+                <button aria-hidden="true" data-dismiss="alert" class="close" type="button">×</button>
+                {{session()->get('message')}}
             </div>
+        </div>
         @endif
     </div>
     <div class="tabs-container">
@@ -31,7 +31,8 @@
                                     <img alt="image" class="img-circle" src="{{ 'storage/'.$av->photo }}">
 
 
-                                    <h3 class="m-b-xs"><strong>{{ $av->prenom.' '.$av->nom.' ('.$av->niveau.')' }}</strong></h3>
+                                    <h3 class="m-b-xs"><strong>{{ $av->prenom.' '.$av->nom.' ('.$av->niveau.')'
+                                            }}</strong></h3>
 
                                     <div class="font-bold">{{ $av->fonction->fonction }}</div>
                                     <address class="m-t-md">
@@ -41,17 +42,27 @@
                                     </address>
                                     <div class="row">
                                         @if ($av->pdfbio && file_exists("storage/".$av->pdfbio))
-                                            <small class="col-sm-8 col-sm-offset-2">
-                                            <a href="" id="{{ $av->pdfbio}}" class="btn btn-primary btn-rounded btn-block btn-download">
-                                                <i class="fa fa-download"></i>Télécharger CV</a>
-                                           </small>
-                                           @else
-                                           <small class="col-sm-8 col-sm-offset-2">
-                                            <a href=""  class="btn btn-danger btn-rounded btn-block btn-download">
-                                                <i class="fa fa-download"></i>CV Absent</a>
-                                           </small>
+                                        <small class="col-sm-6 col-sm-offset-3 mb-3" style="margin-bottom: 10px;">
+                                            <a href="" id="{{ $av->pdfbio}}"
+                                                class="btn btn-xs btn-primary btn-xs btn-download">
+                                                <i class="fa fa-download"></i>
+                                                <i class="fa fa-file-pdf-o"></i>
+                                                CV</a>
+                                        </small>
+                                        @else
+                                        <small class="col-sm-6 col-sm-offset-3 mb-3" style="margin-bottom: 10px;">
+                                            <a href="" class="btn btn-danger  btn-xs btn-download">
+                                                <i class="fa fa-download"></i>
+                                                <i class="fa fa-file-pdf-o"></i>
+                                                CV Absent</a>
+                                        </small>
                                         @endif
-
+                                        <small class="col-sm-6 col-sm-offset-3" style="margin-bottom: 10px;">
+                                            <a href="" id="{{ $av->id}}"
+                                                class="btn btn-xs btn-warning downloadQr">
+                                                <i class="fa fa-download"></i>
+                                                <i class="fa fa-qrcode"></i>QRCODE</a>
+                                        </small>
                                     </div>
 
 
@@ -59,9 +70,12 @@
                                 </a>
                                 <div class="contact-box-footer">
                                     <div class="m-t-xs btn-group">
-                                        <a href="{{ route('detailAvocat',['id'=>$av->id]) }}" class="btn btn-xs btn-white"><i class="fa fa-info-circle"></i> detail</a>
-                                        <a href="{{ route('editAvocat',['id'=>$av->id]) }}" class="btn btn-xs btn-white"><i class="fa fa-edit"></i> Edite </a>
-                                        <a id="deleteAvocat" href="{{$av->id}}" class="btn btn-xs btn-white"><i class="fa fa-trash"></i> delete</a>
+                                        <a href="{{ route('detailAvocat',['id'=>$av->id]) }}"
+                                            class="btn btn-xs btn-white"><i class="fa fa-info-circle"></i> detail</a>
+                                        <a href="{{ route('editAvocat',['id'=>$av->id]) }}"
+                                            class="btn btn-xs btn-white"><i class="fa fa-edit"></i> Edite </a>
+                                        <a id="deleteAvocat" href="{{$av->id}}" class="btn btn-xs btn-white"><i
+                                                class="fa fa-trash"></i> delete</a>
                                     </div>
                                 </div>
 
@@ -100,7 +114,7 @@
                                             </a>
                                             <a href="{{route('editFonction',$i->id)}}"
                                                 class="btn btn-outline btn-warning dim">
-                                                 <i class="fa fa-edit"></i>
+                                                <i class="fa fa-edit"></i>
                                             </a>
                                         </p>
                                     </td>
@@ -127,7 +141,7 @@
 @endsection
 @section('autres-script')
 <script type="text/javascript">
-  $(document).ready(function () {
+    $(document).ready(function () {
             $(document).on("click", "#deleteAvocat", function (e) {
                 e.preventDefault();
                 var id = $(this).attr("href");
@@ -199,6 +213,29 @@ function actualiser() {
         $.ajax({
             type: 'GET',
             url: 'downloadCv',
+            data: {'cv':data},
+            xhrFields: {
+                responseType: 'blob'
+            },
+            success: function(response){
+                var blob = new Blob([response]);
+                var link = document.createElement('a');
+                link.href = window.URL.createObjectURL(blob);
+                link.download ='PLA_'+data;
+                link.click();
+            },
+            error: function(blob){
+                console.log(blob);
+            }
+        });
+    });
+    $(".downloadQr").click(function(e){
+        e.preventDefault();
+        var data = $(this).attr('id');
+
+        $.ajax({
+            type: 'GET',
+            url: 'downloadQr',
             data: {'cv':data},
             xhrFields: {
                 responseType: 'blob'
