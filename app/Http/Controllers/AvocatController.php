@@ -45,7 +45,7 @@ class AvocatController extends Controller
             ->generate("https://beraca.hardymuanda.com/qreunion.php?reunion=".$req);
            // $image->move('storage/qr/', $image);
 
-        // echo '<img src="' . $image . '" alt="QR Code" />';
+         echo '<img src="data:image/png;base64,' . base64_encode($image) . '" alt="QR Code" />';
         return base64_encode($image);
 
     }
