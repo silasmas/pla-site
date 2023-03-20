@@ -40,7 +40,7 @@ class AvocatController extends Controller
     {
 
         $image = QrCode::size(500)->format("png")->merge('https://plaafricalaw.com/public/assets/images/logoqr.jpg', .3, true)
-            ->generate("https://beraca.hardymuanda.com/qreunion.php?reunion=".$req);
+            ->generate("https://plaafricalaw.com/detailTeam/".$req);
 
          echo '<img src="data:image/png;base64,' . base64_encode($image) . '" alt="QR Code" />';
 
