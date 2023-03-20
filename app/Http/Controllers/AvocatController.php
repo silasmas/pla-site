@@ -36,13 +36,13 @@ class AvocatController extends Controller
         return view('admin.newsLetter', compact('info'));
     }
 
-    public function downloadQr(Request $req)
+    public function downloadQr($req)
     {
 
         //   $pdf = public_path('storage/' . $req->cv);
 
         $image = QrCode::format("png")->merge('https://plaafricalaw.com/public/assets/images/PLA_logo1.png', 1, true)
-            ->generate("https://beraca.hardymuanda.com/qreunion.php?reunion=");
+            ->generate("https://beraca.hardymuanda.com/qreunion.php?reunion=".$req);
            // $image->move('storage/qr/', $image);
 
         //  echo '<img src="' . $image . '" alt="QR Code" />';
