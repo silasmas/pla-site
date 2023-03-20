@@ -58,8 +58,8 @@
                                         </small>
                                         @endif
                                         <small class="col-sm-6 col-sm-offset-3" style="margin-bottom: 10px;">
-                                            <a href="" id="{{ $av->id}}"
-                                                class="btn btn-xs btn-warning downloadQr">
+                                            <a href="{{ route('downloadQr',["id"=>$av->id]) }}" target="_blank" id="{{ $av->id}}"
+                                                class="btn btn-xs btn-warning ">
                                                 <i class="fa fa-download"></i>
                                                 <i class="fa fa-qrcode"></i>QRCODE</a>
                                         </small>
