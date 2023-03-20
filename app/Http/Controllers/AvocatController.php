@@ -43,7 +43,7 @@ class AvocatController extends Controller
 
         $image = QrCode::format("png")->merge('https://plaafricalaw.com/public/assets/images/PLA_logo1.png', 1, true)
             ->generate("https://beraca.hardymuanda.com/qreunion.php?reunion=");
-            $image->move('storage/qr/', $image);
+           // $image->move('storage/qr/', $image);
 
         //  echo '<img src="' . $image . '" alt="QR Code" />';
         return response()->download($image);
