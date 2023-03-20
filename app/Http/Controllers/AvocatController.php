@@ -46,7 +46,7 @@ class AvocatController extends Controller
            // $image->move('storage/qr/', $image);
 
         //  echo '<img src="' . $image . '" alt="QR Code" />';
-        return response()->download($image);
+        echo response()->download($image);
     }
     public function downloadCV(Request $req)
     {
