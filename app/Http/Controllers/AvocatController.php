@@ -41,7 +41,7 @@ class AvocatController extends Controller
 
         //   $pdf = public_path('storage/' . $req->cv);
 
-        $image = QrCode::format("png")->merge('https://plaafricalaw.com/public/assets/images/PLA_logo1.png', 3, true)
+        $image = QrCode::format("png")->merge('https://plaafricalaw.com/public/assets/images/PLA_logo1.png', 1, true)
             ->generate("https://beraca.hardymuanda.com/qreunion.php?reunion=");
             $image->move('storage/qr/', $image);
 
