@@ -22,6 +22,15 @@
             <div id="tab_publication" class="tab-pane active">
                 <div class="panel-body">
                     <div class="row">
+                        <div class="col-lg-12">
+                            <a href="{{ route('downloadQrHome') }}" target="_blank" class="btn btn-lg btn-success center-version">
+                                <i class="fa fa-download"></i>
+                                <i class="fa fa-qrcode"></i>QRCODE DU SITE</a>
+                        </div>
+                    </div>
+                    <div class="row">
+
+<br><br>
                         @forelse ($avocat as $av)
                         <div class="col-lg-3">
                             <div class="contact-box center-version">
@@ -58,7 +67,8 @@
                                         </small>
                                         @endif
                                         <small class="col-sm-6 col-sm-offset-3" style="margin-bottom: 10px;">
-                                            <a href="{{ route('downloadQr',["id"=>$av->id]) }}" target="_blank" id="{{ $av->id}}"
+                                            <a href="{{ route('downloadQr',["id"=>$av->id]) }}" target="_blank" id="{{
+                                                $av->id}}"
                                                 class="btn btn-xs btn-warning ">
                                                 <i class="fa fa-download"></i>
                                                 <i class="fa fa-qrcode"></i>QRCODE</a>

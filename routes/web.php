@@ -35,6 +35,7 @@ Route::group(
         Route::get('detailCompetence', [InfoController::class, 'show_competence'])->name('detailCompetence');
         Route::get('downloadCv', [AvocatController::class, 'downloadCv'])->name('downloadCv');
         Route::get('downloadQr/{id}', [AvocatController::class, 'downloadQr'])->name('downloadQr');
+        Route::get('downloadQrHome', [AvocatController::class, 'downloadQrHome'])->name('downloadQrHome');
         Route::get('downloadCvPub', [PublicationController::class, 'downloadCvPub'])->name('downloadCvPub');
 
         //newsletter

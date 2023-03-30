@@ -36,13 +36,22 @@ class AvocatController extends Controller
         return view('admin.newsLetter', compact('info'));
     }
 
+    public function downloadQrHome()
+    {
+
+        $image = QrCode::size(300)->format("png")->merge('https://plaafricalaw.com/public/assets/images/logoqr.jpg', 0.1, true)
+            ->generate("https://plaafricalaw.com/");
+
+        echo '<img src="data:image/png;base64,' . base64_encode($image) . '" alt="QR Code" />';
+
+    }
     public function downloadQr($req)
     {
 
         $image = QrCode::size(300)->format("png")->merge('https://plaafricalaw.com/public/assets/images/logoqr.jpg', 0.1, true)
-            ->generate("https://plaafricalaw.com/detailTeam/".$req);
+            ->generate("https://plaafricalaw.com/detailTeam/" . $req);
 
-         echo '<img src="data:image/png;base64,' . base64_encode($image) . '" alt="QR Code" />';
+        echo '<img src="data:image/png;base64,' . base64_encode($image) . '" alt="QR Code" />';
 
     }
     public function downloadCV(Request $req)
