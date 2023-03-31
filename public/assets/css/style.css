@@ -22,8 +22,11 @@ body{
     box-shadow: none;
 }
 p{
-    font-family: 'Mulish', sans-serif !important;
+    font-family: 'Mulish', sans-serif!important;
     color: var(--colorTextParagraph);
+}
+p span{
+    font-family: 'Mulish', sans-serif!important;
 }
 a{
     color: inherit;
