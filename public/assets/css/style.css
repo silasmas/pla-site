@@ -3169,7 +3169,7 @@ color: var(--primaryColor);
     .block_3 p{
         padding-right: 0;
         font-size: 15px;
-        line-height: 25px;
+        /* line-height: 25px; */
         margin-top: 0!important;
     }
     .block_3 h2{
