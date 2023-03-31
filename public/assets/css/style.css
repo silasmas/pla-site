@@ -2882,16 +2882,17 @@ color: var(--primaryColor);
     object-fit: cover;
     border-radius: 10px;
 }
-.block_10 ul{
+/* .block_10 ul{
     padding-left: 0;
     list-style: none;
-}
+} */
 .block_10 ul li{
     position: relative;
     color: var(--colorTextParagraph);
     font-size: 15px;
-    padding-bottom: 20px;
-    padding-left: 20px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    font-family: 'Mulish', sans-serif!important;
 }
 .block_10 ul li .fas{
     position: absolute;
