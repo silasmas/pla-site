@@ -1121,7 +1121,7 @@ a{
 }
 .block_3 p{
     font-size: 16px;
-    line-height: 32px;
+    /* line-height: 32px; */
     padding-right: 50px;
 }
 .block_3 .card{
@@ -3335,7 +3335,7 @@ color: var(--primaryColor);
     }
     .block_3 p {
         padding-right: 0;
-        line-height: 25px;
+        /* line-height: 25px; */
         margin-top: 0 !important;
     }
 
@@ -3479,7 +3479,7 @@ color: var(--primaryColor);
     }
     .block_3 p {
         padding-right: 0;
-        line-height: 25px;
+        /* line-height: 25px; */
         margin-top: 0 !important;
     }
     .block_5 p{
