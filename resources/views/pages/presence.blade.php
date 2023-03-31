@@ -23,9 +23,9 @@
                         </div>
                         <div class="card-body">
                             <h6>{{ $pr->titre }}</h6>
-                            <p><span>Email :</span> {{ $pr->email }}</p>
-                            <p><span>Tel :</span> {{ $pr->telephone }}</p>
-                            <p><span>@lang('info.titrepage.adresse') : </span>{{ $pr->adresse }}</p>
+                            <p><span><i class="fas fa-envelope"></i> :</span> {{ $pr->email }}</p>
+                            <p><span><i class="fas fa-phone"></i> :</span> {{ $pr->telephone }}</p>
+                            <p><i class="fas fa-map-marker"></i><span>@lang('info.titrepage.adresse') : </span>{{ $pr->adresse }}</p>
                         </div>
                         </div>
                     </a>
