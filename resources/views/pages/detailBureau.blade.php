@@ -38,7 +38,7 @@
                                                     <h2> {{ $se->titre }}</h2>
                                                     <p><span><i class="fas fa-envelope"></i> :</span> {{ $se->email }}</p>
                                                     <p><span><i class="fas fa-phone"></i> :</span> {{ $se->telephone }}</p>
-                                                    <p><span>Adresse :</span> {{ $se->physique }}</p>
+                                                    <p><span><i class="fas fa-map-marker"></i> :</span> {{ $se->physique }}</p>
                                                 </div>
                                                 <div class="col-lg-6 col-md-6">
                                                     <div class="card card-picture">
