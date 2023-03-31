@@ -2894,6 +2894,9 @@ color: var(--primaryColor);
     padding-left: 10px;
     font-family: 'Mulish', sans-serif!important;
 }
+.block_10 ul li span{
+    font-family: 'Mulish', sans-serif!important;
+}
 .block_10 ul li .fas{
     position: absolute;
     top: 5px;
