@@ -2756,9 +2756,9 @@ color: var(--primaryColor);
     color: var(--primaryColorDarken);
     font-size: 14px;
 }
-.block_10 p{
+/* .block_10 p{
     line-height: 35px;
-}
+} */
 .block_10 p::first-letter{
     font-size: 25px;
     color: var(--secondayColor);
