@@ -10,6 +10,7 @@
     --primaryColorDarken: #970803;
 }
 body{
+
     position: relative;
     overflow-x: hidden;
     height: 100%;
@@ -21,6 +22,7 @@ body{
     box-shadow: none;
 }
 p{
+    font-family: 'Mulish', sans-serif !important;
     color: var(--colorTextParagraph);
 }
 a{
