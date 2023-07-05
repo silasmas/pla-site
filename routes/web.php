@@ -17,14 +17,8 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 Route::group(
     [
         'prefix' => LaravelLocalization::setLocale(),
-<<<<<<< Updated upstream
         'middleware' => ['localeSessionRedirect', 'localizationRedirect', 'localeViewPath'],
     ], function () {
-=======
-        'middleware' => ['localeSessionRedirect', 'localizationRedirect', 'localeViewPath']
-    ],
-    function () {
->>>>>>> Stashed changes
         Route::get('/', [InfoController::class, 'index'])->name('home');
         Route::get('about', [InfoController::class, 'about'])->name('about');
         Route::get('expertise', [InfoController::class, 'expertise'])->name('expertise');
@@ -44,27 +38,10 @@ Route::group(
         Route::get('downloadQrHome', [AvocatController::class, 'downloadQrHome'])->name('downloadQrHome');
         Route::get('downloadCvPub', [PublicationController::class, 'downloadCvPub'])->name('downloadCvPub');
 
-<<<<<<< Updated upstream
         //newsletter
         Route::post('add.newsletter', [InfoController::class, 'store'])->name('add.newsletter');
 
     });
-=======
-        Route::get('detailPublication', [InfoController::class, 'show_pub'])->name('detailPublication');
-        Route::get('detailTeam/{id}', [InfoController::class, 'show_team'])->name('detailTeam');
-        Route::get('teamByCat/{id}', [InfoController::class, 'show'])->name('teamByCat');
-        Route::get('teamByBureau/{id}', [InfoController::class, 'teamByBureau'])->name('teamByBureau');
-        Route::get('detailExpertise', [InfoController::class, 'show_secteur'])->name('detailExpertise');
-        Route::get('detailBureau/{id}', [BureauController::class, 'show'])->name('detailBureau');
-        Route::get('detailCompetence', [InfoController::class, 'show_competence'])->name('detailCompetence');
-        Route::get('downloadCv', [AvocatController::class, 'downloadCv'])->name('downloadCv');
-        Route::get('downloadCvPub', [PublicationController::class, 'downloadCvPub'])->name('downloadCvPub');
-
-        //newsletter
-        Route::post('add.newsletter', [InfoController::class, 'store'])->name('add.newsletter');
-    }
-);
->>>>>>> Stashed changes
 
 Route::middleware(['auth'])->group(function () {
     //newsletter
@@ -126,10 +103,6 @@ Route::middleware(['auth'])->group(function () {
     Route::get('admin_detailPublication/{id}', [PublicationController::class, 'show'])->name('admin_detailPublication');
     Route::get('admin_detailExpertise/{id}', [ExpertiseController::class, 'show'])->name('admin_detailExpertise');
 
-<<<<<<< Updated upstream
-=======
-
->>>>>>> Stashed changes
     Route::get('destroy_about/{id}', [AboutController::class, 'destroy'])->name('destroy_about');
     Route::get('destroy_info/{id}', [AvocatController::class, 'destroyInfo'])->name('destroy_info');
     Route::get('destroy_Avocat/{id}', [AvocatController::class, 'destroy'])->name('destroy_Avocat');
