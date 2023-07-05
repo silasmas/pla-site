@@ -64,7 +64,7 @@
                     </a>
                 </p>
                 @endforeach
-            </div> 
+            </div>
         @if (!empty($accueil->email))
                         <p class="mb-0">
                             <i class="fas fa-envelope"></i>

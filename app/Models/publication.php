@@ -13,10 +13,10 @@ class publication extends Model
 {
     use HasFactory;
 
+    use HasTranslations;
     protected $guarded=[];
     protected $dates=['created_at','updated_at'];
 
-    use HasTranslations;
 
    // public $with = ['avocat','categorie','user'];
     public $translatable = ['titre','soustitre','contenu'];

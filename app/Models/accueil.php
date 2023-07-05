@@ -9,12 +9,11 @@ use Spatie\Translatable\HasTranslations;
 class accueil extends Model
 {
     use HasFactory;
-
-    protected $guarded=[];
-    protected $dates=['created_at','updated_at'];
-
     use HasTranslations;
 
-    public $translatable = ['textsuivre','adresse','telphone','txtfooter',
-    't1Team','t2Team','t1Pub','t2Pub','titreTeam','descriptionTeam'];
+    protected $guarded = [];
+    protected $dates = ['created_at', 'updated_at'];
+
+    public $translatable = ['textsuivre', 'adresse', 'telphone', 'txtfooter',
+        't1Team', 't2Team', 't1Pub', 't2Pub', 'titreTeam', 'descriptionTeam'];
 }

@@ -10,10 +10,10 @@ class slides extends Model
 {
     use HasFactory;
 
+    use HasTranslations;
     protected $guarded=[];
     protected $dates=['created_at','updated_at'];
 
-    use HasTranslations;
 
     public $translatable = ['titresmall','titrebig','resume','textbtn'];
 }

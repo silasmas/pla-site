@@ -11,10 +11,10 @@ class categorie extends Model
 {
     use HasFactory;
 
+    use HasTranslations;
     protected $guarded=[];
     protected $dates=['created_at','updated_at'];
 
-    use HasTranslations;
 
     public $translatable = ['nom','biographie'];
     public function publication(){

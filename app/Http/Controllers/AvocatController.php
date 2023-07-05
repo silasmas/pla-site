@@ -39,6 +39,7 @@ class AvocatController extends Controller
     public function downloadQrHome()
     {
 
+<<<<<<< Updated upstream
         $image = QrCode::size(300)->format("png")->merge('https://plaafricalaw.com/public/assets/images/logoqr.jpg', 0.1, true)
             ->generate("https://plaafricalaw.com/");
 
@@ -57,6 +58,8 @@ class AvocatController extends Controller
     public function downloadCV(Request $req)
     {
 
+=======
+>>>>>>> Stashed changes
         $pdf = public_path('storage/' . $req->cv);
         // dd($pdf);
         return response()->download($pdf);

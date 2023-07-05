@@ -11,10 +11,10 @@ class sorte extends Model
 {
     use HasFactory;
 
+    use HasTranslations;
     protected $guarded=[];
     protected $dates=['created_at','updated_at'];
 
-    use HasTranslations;
    // public $with = ['expertise'];
     public $translatable = ['nom'];
 

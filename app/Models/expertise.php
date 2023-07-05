@@ -11,11 +11,11 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 class expertise extends Model
 {
     use HasFactory;
+    use HasTranslations;
 
     protected $guarded=[];
     protected $dates=['created_at','updated_at'];
 
-    use HasTranslations;
    // public $with = ['sor'];
     public $translatable = ['titre1','titre2','contenu'];
     // public function sor(){

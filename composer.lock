@@ -154,6 +154,7 @@
             "time": "2023-02-27T10:27:10+00:00"
         },
         {
+<<<<<<< Updated upstream
             "name": "bacon/bacon-qr-code",
             "version": "2.0.8",
             "source": {
@@ -217,6 +218,17 @@
             },
             "dist": {
                 "type": "zip",
+=======
+            "name": "brick/math",
+            "version": "0.10.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/brick/math.git",
+                "reference": "459f2781e1a08d52ee56b0b1444086e038561e3f"
+            },
+            "dist": {
+                "type": "zip",
+>>>>>>> Stashed changes
                 "url": "https://api.github.com/repos/brick/math/zipball/459f2781e1a08d52ee56b0b1444086e038561e3f",
                 "reference": "459f2781e1a08d52ee56b0b1444086e038561e3f",
                 "shasum": ""
@@ -264,6 +276,7 @@
             "time": "2022-08-10T22:54:19+00:00"
         },
         {
+<<<<<<< Updated upstream
             "name": "dasprid/enum",
             "version": "1.0.4",
             "source": {
@@ -323,6 +336,17 @@
             },
             "dist": {
                 "type": "zip",
+=======
+            "name": "dflydev/dot-access-data",
+            "version": "v3.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dflydev/dflydev-dot-access-data.git",
+                "reference": "f41715465d65213d644d3141a6a93081be5d3549"
+            },
+            "dist": {
+                "type": "zip",
+>>>>>>> Stashed changes
                 "url": "https://api.github.com/repos/dflydev/dflydev-dot-access-data/zipball/f41715465d65213d644d3141a6a93081be5d3549",
                 "reference": "f41715465d65213d644d3141a6a93081be5d3549",
                 "shasum": ""
@@ -3147,6 +3171,7 @@
             "time": "2023-01-12T18:13:24+00:00"
         },
         {
+<<<<<<< Updated upstream
             "name": "simplesoftwareio/simple-qrcode",
             "version": "4.2.0",
             "source": {
@@ -3229,6 +3254,22 @@
                 "shasum": ""
             },
             "require": {
+=======
+            "name": "spatie/laravel-package-tools",
+            "version": "1.12.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spatie/laravel-package-tools.git",
+                "reference": "09f80fa240d44fafb1c70657c74ee44ffa929357"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spatie/laravel-package-tools/zipball/09f80fa240d44fafb1c70657c74ee44ffa929357",
+                "reference": "09f80fa240d44fafb1c70657c74ee44ffa929357",
+                "shasum": ""
+            },
+            "require": {
+>>>>>>> Stashed changes
                 "illuminate/contracts": "^7.0|^8.0|^9.0",
                 "php": "^7.4|^8.0"
             },
