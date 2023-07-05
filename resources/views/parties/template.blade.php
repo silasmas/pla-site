@@ -49,6 +49,17 @@
 <script async src='https://stackwhats.com/pixel/4958f4367609133da9d63d60b8f3ca'></script>
 
 
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DFXMGDXBEF"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-DFXMGDXBEF');
+</script>
+
+
 @yield("autres_script")
     <script>
 //         if (document.querySelector('.js-read-more')) {

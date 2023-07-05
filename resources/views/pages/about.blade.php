@@ -34,21 +34,9 @@
                         </div>
                     @endif
 
-                    {{-- <article>
-                    <div class="read-more js-read-more" data-rm-words="750">
-                         {!! !empty($about->contenu)?$about->contenu:'' !!}
-                    </div>
-                </article> --}}
-
-
                 </div>
                 <div class="col-lg-6 col-sm-6">
                     <div class="card">
-                        <!-- <div class="play-video">
-                                <span>
-                                    <i class="fas fa-play"></i>
-                                </span>
-                            </div> -->
                         <img src="{{ !empty($about->photoabout) ? asset('storage/' . $about->photoabout) : asset('img/default.png') }}"
                             alt="img">
                         <div class="block-badge">
