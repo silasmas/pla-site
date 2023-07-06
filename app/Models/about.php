@@ -13,6 +13,6 @@ class about extends Model
     protected $guarded = [];
     protected $dates = ['created_at', 'updated_at'];
 
-    public $translatable = ['titre1', 'detail', 'titre2',
-        'h1', 'h2', 'detail2', 'detail3', 'quisommenous', 'titrecabinet'];
+    public $translatable = ['titre1', 'detail', 'titre2', 'temps',
+        'h1', 'h2', 'detail2', 'detail3', 'quisommenous', 'titrecabinet', 'contenu', 'titreNosValeurs', 'slogant'];
 }
