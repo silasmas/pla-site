@@ -14,5 +14,5 @@ class about extends Model
     protected $dates = ['created_at', 'updated_at'];
 
     public $translatable = ['titre1', 'detail', 'titre2',
-        'h1', 'h2', 'detail2', 'detail3'];
+        'h1', 'h2', 'detail2', 'detail3', 'quisommenous', 'titrecabinet'];
 }
