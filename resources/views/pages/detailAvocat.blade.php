@@ -38,11 +38,17 @@
                                 <h2>@lang('info.team.bio')</h2>
 
                                 {{-- <p>{!! $avocat->biographie !!}</p> --}}
-
-
+                                @if ($avocat->biographie)
                                 <div>
-                                    <iframe class="iframe-custom" id="iframe-example" frameborder="0" scrolling="no" onload="100px" src="{{ asset('storage/'.$avocat->biographie) }}" allowfullscreen></iframe>
+                                    <iframe class="iframe-custom" id="iframe-example" frameborder="0" scrolling="no"
+                                        onload="100px" src="{{ asset('storage/'.$avocat->biographie) }}"
+                                        allowfullscreen></iframe>
                                 </div>
+                                @else
+
+                                @endif
+
+
                             </div>
                             <h2 style="" class="mt-4 mb-4">
                                 @if ($avocat->publication->count()==0)
