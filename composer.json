@@ -12,6 +12,7 @@
         "laravel/tinker": "^2.8",
         "mcamara/laravel-localization": "^1.8",
         "phpoffice/phpword": "^1.1",
+        "simplesoftwareio/simple-qrcode": "^4.2",
         "spatie/laravel-translatable": "^6.5"
     },
     "require-dev": {
