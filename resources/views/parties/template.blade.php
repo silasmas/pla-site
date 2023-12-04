@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 <head>
-    {{-- header('Content-Type: text/plain; charset=utf-8'); --}}
+    header('Content-Type: text/plain; charset=utf-8')
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,7 +22,29 @@
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
     @yield('autres-tyle')
 </head>
+<style>
+    /* Cibler l'iframe par son ID */
+#iframe-example {
+  border: 2px solid #ccc; /* Ajouter une bordure de 2 pixels avec une couleur grise */
+  border-radius: 10px; /* Ajouter des coins arrondis à la bordure */
+  box-shadow: 3px 3px 5px #888; /* Ajouter une ombre portée */
+}
 
+/* Cibler l'iframe par sa classe */
+.iframe-custom {
+  width: 100%; /* Définir une largeur de 100% pour remplir complètement le conteneur parent */
+  height: 1000px; /* Définir une hauteur fixe de 400 pixels */
+}
+
+    iframe body{
+    font-size: inherit!important;
+
+  }
+    #my-iframe {
+        /* Définissez une hauteur minimale pour l'iframe */
+        min-height: 700px;
+    }
+</style>
 <body>
     @include('parties.menu')
 
@@ -111,7 +133,7 @@
         $("#formnewsletter").on("submit", function (e) {
             e.preventDefault();
             //alert('ok');
-            
+
             // add("#formnewsletter", '#btNewsletter', '../add.newsletter')
         });
     });

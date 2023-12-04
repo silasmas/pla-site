@@ -132,6 +132,6 @@
   <div class="bottombar">
     <div class="text-center">
       <p class="mb-0" style="opacity: .5;">Copyright © Pathy Liongo & Associates 2021</p>
-      <p class="mb-0" style="font-size: 14px;"><small>Designed By <a href="https://www.silasdev.com" target="_blank">SilasDev</a></small></p>
+      <p class="mb-0" style="font-size: 14px;"><small>Designed By <a href="https://www.silasmas.com" target="_blank">SilasDev</a></small></p>
     </div>
   </div>

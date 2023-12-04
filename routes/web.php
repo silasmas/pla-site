@@ -41,6 +41,11 @@ Route::group(
         //newsletter
         Route::post('add.newsletter', [InfoController::class, 'store'])->name('add.newsletter');
 
+        Route::get('/cv', function () {
+            return view('cv', ['htmlFilePath' => 'video/CV_Me_Lionnel.html']);
+        })->name('cv');
+
+
     });
 
 Route::middleware(['auth'])->group(function () {

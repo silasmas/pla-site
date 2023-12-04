@@ -16,7 +16,7 @@
                 </a>
             </li>
             <li>
-                <a href="{{route('about') }}" class="nav-link">
+                <a href="{{route('about')}}" class="nav-link">
                     @lang('info.m2')
                 </a>
             </li>
