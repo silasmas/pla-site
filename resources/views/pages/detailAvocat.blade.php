@@ -45,7 +45,7 @@
                                         allowfullscreen></iframe>
                                 </div>
                                 @else
-
+                                <p class="text-danger">@lang('info.titrepage.videInfo')</p>
                                 @endif
 
 
