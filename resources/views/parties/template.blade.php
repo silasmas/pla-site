@@ -46,6 +46,9 @@
     }
 </style>
 <body>
+    <div class="loading">
+        <div id="loader"></div>
+    </div>
     @include('parties.menu')
 
     @yield('content')

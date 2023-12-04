@@ -1,6 +1,4 @@
- <div class="loading">
-            <div id="loader"></div>
-        </div>
+
 <div class="full-menu">
     <div class="close-menu">
         <span></span>
