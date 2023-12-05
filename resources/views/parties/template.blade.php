@@ -34,7 +34,7 @@
 iframe {
   overflow-y: scroll; /* Ajoute une barre de défilement verticale */
   scrollbar-width: thin; /* Définit l'épaisseur de la barre de défilement */
-  scrollbar-color: #007bff #f5f5f5; /* Définit la couleur de la barre de défilement */
+  scrollbar-color: #DF2219 #f5f5f5; /* Définit la couleur de la barre de défilement */
 }
 
 /* Cibler l'iframe par sa classe */
@@ -64,12 +64,12 @@ iframe {
     }
 
     /* Styles pour le paragraphe */
-p {
+/* p {
   font-family: Arial, sans-serif;
   font-size: 14px;
   line-height: 1.5;
   margin-bottom: 10px;
-}
+} */
 
 /* Styles pour les titres */
 /* h1, h2, h3, h4, h5, h6 {
