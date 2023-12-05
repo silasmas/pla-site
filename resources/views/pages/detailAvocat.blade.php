@@ -40,8 +40,8 @@
                                 {{-- <p>{!! $avocat->biographie !!}</p> --}}
                                 @if ($avocat->biographie)
                                 <div>
-                                    <iframe class="iframe-custom" id="iframe-example" frameborder="0" scrolling="no"
-                                        onload="100px" src="{{ asset('storage/'.$avocat->biographie) }}"
+                                    <iframe class="iframe-custom" id="iframe-example" frameborder="0"
+                                        onload="10" src="{{ asset('storage/'.$avocat->biographie) }}"
                                         allowfullscreen></iframe>
                                 </div>
                                 @else

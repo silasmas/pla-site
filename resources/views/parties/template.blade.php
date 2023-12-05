@@ -2,12 +2,12 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 <head>
-    header('Content-Type: text/plain; charset=utf-8')
+{{-- header('Content-Type: text/plain; charset=utf-8') --}}
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="csrf-token" content="{{ csrf_token() }}" />
-    <title>{{ config('app.name') }} | {{ isset($titre)?$titre:"" }}</title>
+    <meta name="csrf-token" content="{{csrf_token()}}" />
+    <title>{{config('app.name')}} | {{isset($titre)?$titre:""}}</title>
     <link rel="shortcut icon" href="{{ asset('assets/images/PlaLogo.ico') }}" type="image/x-icon">
     <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
     <link rel=" stylesheet" href="{{ asset('assets/font/css/all.min.css') }}">
@@ -28,14 +28,32 @@
   border: 2px solid #ccc; /* Ajouter une bordure de 2 pixels avec une couleur grise */
   border-radius: 10px; /* Ajouter des coins arrondis à la bordure */
   box-shadow: 3px 3px 5px #888; /* Ajouter une ombre portée */
+  padding: 30px;
+
+}
+iframe {
+  overflow-y: scroll; /* Ajoute une barre de défilement verticale */
+  scrollbar-width: thin; /* Définit l'épaisseur de la barre de défilement */
+  scrollbar-color: #007bff #f5f5f5; /* Définit la couleur de la barre de défilement */
 }
 
 /* Cibler l'iframe par sa classe */
 .iframe-custom {
   width: 100%; /* Définir une largeur de 100% pour remplir complètement le conteneur parent */
-  height: 1000px; /* Définir une hauteur fixe de 400 pixels */
+  height: 600px; /* Définir une hauteur fixe de 400 pixels */
+}
+/* Styles pour la barre de défilement */
+::-webkit-scrollbar {
+  width: 10px; /* Définit la largeur de la barre de défilement pour les navigateurs WebKit (Chrome, Safari, etc.) */
 }
 
+::-webkit-scrollbar-thumb {
+  background-color: #007bff; /* Définit la couleur du curseur de la barre de défilement pour les navigateurs WebKit */
+}
+
+::-webkit-scrollbar-track {
+  background-color: #f5f5f5; /* Définit la couleur de fond de la barre de défilement pour les navigateurs WebKit */
+}
     iframe body{
     font-size: inherit!important;
 
@@ -44,6 +62,44 @@
         /* Définissez une hauteur minimale pour l'iframe */
         min-height: 700px;
     }
+
+    /* Styles pour le paragraphe */
+p {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+/* Styles pour les titres */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Times New Roman", serif;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+/* Styles pour les listes à puces */
+ul {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+/* Styles pour les listes numérotées */
+ol {
+  list-style-type: decimal;
+  margin-left: 20px;
+}
+
+/* Styles pour les liens hypertexte */
+a {
+  color: #007bff;
+  text-decoration: underline;
+}
+
+/* Autres styles personnalisés */
+/* ... */
+
 </style>
 <body>
     <div class="loading">

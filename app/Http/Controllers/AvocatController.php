@@ -2,17 +2,17 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\info;
-use App\Models\avocat;
-use App\Models\bureau;
 use App\Models\accueil;
-use App\Models\fonction;
-use App\Models\publication;
+use App\Models\avocat;
 use App\Models\avocatBureau;
+use App\Models\bureau;
+use App\Models\fonction;
+use App\Models\info;
+use App\Models\publication;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
-use PhpOffice\PhpWord\IOFactory;
 use Illuminate\Support\Facades\Validator;
+use PhpOffice\PhpWord\IOFactory;
 use SimpleSoftwareIO\QrCode\Facades\QrCode;
 
 class AvocatController extends Controller
@@ -102,25 +102,25 @@ class AvocatController extends Controller
         ]);
         if ($por->passes()) {
             $file = $request->file('photo');
-            $file == ''? '': ($filenameImg ='galeri/' . time() . '.' . $file->getClientOriginalName());
+            $file == '' ? '' : ($filenameImg = 'galeri/' . time() . '.' . $file->getClientOriginalName());
             $file == '' ? '' : $file->move('storage/galeri', $filenameImg);
 
             $pdfbio = $request->file('pdfbio');
-            $pdfbio == '' ? $pdfbioname = null: ($pdfbioname = 'pdfbio/' . time() . '.' . $pdfbio->getClientOriginalName());
+            $pdfbio == '' ? $pdfbioname = null : ($pdfbioname = 'pdfbio/' . time() . '.' . $pdfbio->getClientOriginalName());
             $pdfbio == '' ? '' : $pdfbio->move('storage/pdfbio', $pdfbioname);
 
             $bio_fr = $request->file('biographie');
             $phpWord = IOFactory::load($bio_fr);
-            $bio_fr == '' ? $bio_frname = null: ($bio_frname = 'biographie/' . time() . '.html');
+            $bio_fr == '' ? $bio_frname = null : ($bio_frname = 'biographie/' . time() . '.html');
             // Enregistrer le contenu du fichier Word en HTML
-            $phpWord->save('storage/'.$bio_frname, 'HTML');
-           //$bio_fr == '' ? '' : $bio_fr->move('storage/biographie', $bio_frname);
+            $phpWord->save('storage/' . $bio_frname, 'HTML');
+            //$bio_fr == '' ? '' : $bio_fr->move('storage/biographie', $bio_frname);
 
             $bio_en = $request->file('biographie_en');
             $phpWorden = IOFactory::load($bio_en);
-            $bio_en == '' ? $bio_enname = null: ($bio_enname = 'biographie/' . time() . '.html');
+            $bio_en == '' ? $bio_enname = null : ($bio_enname = 'biographie/' . time() . '.html');
             // Enregistrer le contenu du fichier Word en HTML
-            $phpWorden->save('storage/'.$bio_enname, 'HTML');
+            $phpWorden->save('storage/' . $bio_enname, 'HTML');
             //$bio_en == '' ? '' : $bio_en->move('storage/biographie', $bio_enname);
             if ($request->photo) {
                 // dd(['fr' => $bio_frname, 'en' => $bio_enname]);
@@ -206,29 +206,29 @@ class AvocatController extends Controller
             $file == '' ? '' : $file->move('storage/galerie', $filenameImg);
 
             $pubpdf = $request->file('pdfbio');
-            $pubpdf == '' ? '': ($pubpdfnam ='pdfbio/' . time() . '.' . $pubpdf->getClientOriginalName());
+            $pubpdf == '' ? '' : ($pubpdfnam = 'pdfbio/' . time() . '.' . $pubpdf->getClientOriginalName());
             $pubpdf == '' ? '' : $pubpdf->move('storage/pdfbio', $pubpdfnam);
 
             $bio_fr = $request->file('biographie');
-            $bio_fr == '' ?"": $phpWord = IOFactory::load($bio_fr);
-            $bio_fr == '' ? $bio_frname = null: ($bio_frname = 'biographie/' . time() . '.html');
+            $bio_fr == '' ? "" : $phpWord = IOFactory::load($bio_fr);
+            $bio_fr == '' ? $bio_frname = null : ($bio_frname = 'biographie/' . time() . '.html');
             // Créer un objet Writer pour la sauvegarde
             $objWriter = IOFactory::createWriter($phpWord, 'HTML');
             // Enregistrer le contenu du fichier Word en HTML
-            $phpWord->save('storage/'.$bio_frname, 'HTML');
-           //$bio_fr == '' ? '' : $bio_fr->move('storage/biographie', $bio_frname);
+            $phpWord->save('storage/' . $bio_frname, 'HTML');
+            //$bio_fr == '' ? '' : $bio_fr->move('storage/biographie', $bio_frname);
 
             $bio_en = $request->file('biographie_en');
-            $bio_en == '' ?"":$phpWorden = IOFactory::load($bio_en);
-            $bio_en == '' ? $bio_enname = null: ($bio_enname = 'biographie/' . time() . '.html');
+            $bio_en == '' ? "" : $phpWorden = IOFactory::load($bio_en);
+            $bio_en == '' ? $bio_enname = null : ($bio_enname = 'biographie/' . time() . '.html');
             // Créer un objet Writer pour la sauvegarde
             $objWriter = IOFactory::createWriter($phpWorden, 'HTML');
             // Enregistrer le contenu du fichier Word en HTML
-            $objWriter->save('storage/'.$bio_enname);
+            $objWriter->save('storage/' . $bio_enname);
 
             $request->pdfbio == "" ? $line->pdfbio = $line->pdfbio : $line->pdfbio = $pubpdfnam;
             $request->photo == "" ? $line->photo = $line->photo : $line->photo = $filenameImg;
-            $request->biographie == "" ? $line->biographie = $line->biographie : $line->biographie =['fr' => $bio_frname, 'en' => $bio_enname];
+            $request->biographie == "" ? $line->biographie = $line->biographie : $line->biographie = ['fr' => $bio_frname, 'en' => $bio_enname];
             $request->niveau == "" ? $line->niveau = $line->niveau : $line->niveau = $request->niveau;
             $request->telephone == "" ? $line->telephone = $line->telephone : $line->telephone = $request->telephone;
             $request->sexe == "" ? $line->sexe = $line->sexe : $line->sexe = $request->sexe;
