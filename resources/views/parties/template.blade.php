@@ -48,7 +48,7 @@ iframe {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #007bff; /* Définit la couleur du curseur de la barre de défilement pour les navigateurs WebKit */
+  background-color: #DF2219; /* Définit la couleur du curseur de la barre de défilement pour les navigateurs WebKit */
 }
 
 ::-webkit-scrollbar-track {
@@ -72,30 +72,30 @@ p {
 }
 
 /* Styles pour les titres */
-h1, h2, h3, h4, h5, h6 {
+/* h1, h2, h3, h4, h5, h6 {
   font-family: "Times New Roman", serif;
   font-weight: bold;
   margin-top: 20px;
   margin-bottom: 10px;
-}
+} */
 
 /* Styles pour les listes à puces */
-ul {
+/* ul {
   list-style-type: disc;
   margin-left: 20px;
-}
+} */
 
 /* Styles pour les listes numérotées */
-ol {
+/* ol {
   list-style-type: decimal;
   margin-left: 20px;
-}
+} */
 
 /* Styles pour les liens hypertexte */
-a {
+/* a {
   color: #007bff;
   text-decoration: underline;
-}
+} */
 
 /* Autres styles personnalisés */
 /* ... */
