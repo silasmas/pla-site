@@ -40,9 +40,9 @@
                                 {{-- <p>{!! $avocat->biographie !!}</p> --}}
                                 @if ($avocat->biographie)
                                 <div>
-                                    <iframe class="iframe-custom" id="iframe-example" frameborder="0"
-                                        onload="10" src="{{ asset('storage/'.$avocat->biographie) }}"
-                                        allowfullscreen></iframe>
+                                    <iframe class="iframe-custom" id="iframe-example" frameborder="0" onload="10"
+                                        src="{{ asset('storage/'.$avocat->biographie) }}" allowfullscreen seamless
+                                        sandbox></iframe>
                                 </div>
                                 @else
                                 <p class="text-danger">@lang('info.titrepage.videInfo')</p>
@@ -171,6 +171,34 @@
 @section('autres_script')
 
 <script type="text/javascript">
+    function resizeIframe() {
+        var iframe = document.getElementById('iframe-example');
+        iframe.style.height = iframe.contentWindow.document.body.scrollHeight + 'px';
+    }
+
+    // Appeler la fonction resizeIframe lorsque le contenu de l'iframe a fini de se charger
+    document.getElementById('iframe-example').onload = resizeIframe;
+
+    function adjustIframeHeight2() {
+  var iframe = document.getElementById('iframe-example');
+  if (iframe) {
+    iframe.style.height = iframe.contentWindow.document.body.scrollHeight + 'px';
+  }
+}
+
+// window.addEventListener('load', adjustIframeHeight2);
+
+// Envoyer la hauteur du contenu à la page parent
+function sendHeightToParent() {
+  var height = document.body.scrollHeight;
+  window.parent.postMessage({ height: height }, '*');
+}
+
+// Appeler la fonction pour envoyer la hauteur au chargement et lors des modifications du contenu
+window.addEventListener('load', sendHeightToParent);
+window.addEventListener('resize', sendHeightToParent);
+
+
     function adjustIframeHeight(height) {
             // Sélectionnez l'iframe en utilisant un sélecteur CSS approprié
             var iframe = document.querySelector("#my-iframe");

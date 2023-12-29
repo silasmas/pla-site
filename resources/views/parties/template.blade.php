@@ -28,11 +28,11 @@
   border: 2px solid #ccc; /* Ajouter une bordure de 2 pixels avec une couleur grise */
   border-radius: 10px; /* Ajouter des coins arrondis à la bordure */
   box-shadow: 3px 3px 5px #888; /* Ajouter une ombre portée */
-  padding: 30px;
+  padding: 10px;
 
 }
 iframe {
-  overflow-y: scroll; /* Ajoute une barre de défilement verticale */
+  /* overflow-y: scroll; Ajoute une barre de défilement verticale */
   scrollbar-width: thin; /* Définit l'épaisseur de la barre de défilement */
   scrollbar-color: #DF2219 #f5f5f5; /* Définit la couleur de la barre de défilement */
 }
@@ -40,7 +40,7 @@ iframe {
 /* Cibler l'iframe par sa classe */
 .iframe-custom {
   width: 100%; /* Définir une largeur de 100% pour remplir complètement le conteneur parent */
-  height: 600px; /* Définir une hauteur fixe de 400 pixels */
+  height: 100%; /*Définir une hauteur fixe de 400 pixels
 }
 /* Styles pour la barre de défilement */
 ::-webkit-scrollbar {
