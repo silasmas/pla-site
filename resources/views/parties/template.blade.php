@@ -40,7 +40,7 @@ iframe {
 /* Cibler l'iframe par sa classe */
 .iframe-custom {
   width: 100%; /* Définir une largeur de 100% pour remplir complètement le conteneur parent */
-  height: 100%; /*Définir une hauteur fixe de 400 pixels
+  height: 500px; /*Définir une hauteur fixe de 400 pixels
 }
 /* Styles pour la barre de défilement */
 ::-webkit-scrollbar {
