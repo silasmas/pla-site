@@ -118,7 +118,7 @@ class AvocatController extends Controller
 
             $bio_en = $request->file('biographie_en');
             $phpWorden = IOFactory::load($bio_en);
-            $bio_en == '' ? $bio_enname = null : ($bio_enname = 'biographie/' . time() . '.html');
+            $bio_en == '' ? $bio_enname = null : ($bio_enname = 'biographie/en' . time() . '.html');
             // Enregistrer le contenu du fichier Word en HTML
             $phpWorden->save('storage/' . $bio_enname, 'HTML');
             //$bio_en == '' ? '' : $bio_en->move('storage/biographie', $bio_enname);
@@ -211,21 +211,22 @@ class AvocatController extends Controller
 
             $bio_fr = $request->file('biographie');
             $bio_fr == '' ? "" : $phpWord = IOFactory::load($bio_fr);
-            $bio_fr == '' ? $bio_frname = null : ($bio_frname = 'biographie/' . time() . '.html');
+            $bio_fr == '' ? $phpWord = null : ($bio_frname = 'biographie/' . time() . '.html');
+            // $bio_fr == '' ? $bio_frname = null : ($bio_frname = 'biographie/' . time() . '.html');
             // Créer un objet Writer pour la sauvegarde
-            $objWriter = IOFactory::createWriter($phpWord, 'HTML');
+            $bio_fr == '' ? "" : $objWriterfr = IOFactory::createWriter($phpWord, 'HTML');
             // Enregistrer le contenu du fichier Word en HTML
-            $phpWord->save('storage/' . $bio_frname, 'HTML');
+            $bio_fr == '' ? "" : $objWriterfr->save('storage/' . $bio_frname, 'HTML');
             //$bio_fr == '' ? '' : $bio_fr->move('storage/biographie', $bio_frname);
 
             $bio_en = $request->file('biographie_en');
             $bio_en == '' ? "" : $phpWorden = IOFactory::load($bio_en);
-            $bio_en == '' ? $bio_enname = null : ($bio_enname = 'biographie/' . time() . '.html');
+            $bio_en == '' ? $bio_enname = null : ($bio_enname = 'biographie/en' . time() . '.html');
             // Créer un objet Writer pour la sauvegarde
-            $objWriter = IOFactory::createWriter($phpWorden, 'HTML');
+            $bio_en == '' ? "" : $objWriter = IOFactory::createWriter($phpWorden, 'HTML');
             // Enregistrer le contenu du fichier Word en HTML
-            $objWriter->save('storage/' . $bio_enname);
-
+            $bio_en == '' ? "" : $objWriter->save('storage/' . $bio_enname);
+            // dd($bio_frname . '----------' . $bio_enname);
             $request->pdfbio == "" ? $line->pdfbio = $line->pdfbio : $line->pdfbio = $pubpdfnam;
             $request->photo == "" ? $line->photo = $line->photo : $line->photo = $filenameImg;
             $request->biographie == "" ? $line->biographie = $line->biographie : $line->biographie = ['fr' => $bio_frname, 'en' => $bio_enname];
