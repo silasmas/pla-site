@@ -27,7 +27,7 @@ class InfoController extends Controller
     public function index()
     {
         $publication = publication::with(['avocat', 'categorie'])->simplePaginate();
-        $avocat = avocat::get();
+        $avocat = avocat::where("visible", 1)->get();
         //    dd($avocat);
         $accueil = accueil::first();
         $bureau = bureau::all();
@@ -72,7 +72,7 @@ class InfoController extends Controller
         // $produits=avocat::with("fonction")->whereHas("fonction",function($q){
         //     return $q->where("id",1);
         // });
-        $avocat = avocat::with('fonction')->orderBy('niveau', 'asc')->get();
+        $avocat = avocat::where("visible", 1)->with('fonction')->orderBy('niveau', 'asc')->get();
         //$avocat=fonction::with('avocat')->distinct()->get();
         $avocat = $avocat->groupBy(function ($member) {
             return $member->niveau;
@@ -135,18 +135,17 @@ class InfoController extends Controller
         // Créer un objet PhpWord
         $phpWord = IOFactory::load($filePath);
         // Chemin où enregistrer le fichier HTML
-        $htmlFilePath =  public_path('video/vd/test.html');
+        $htmlFilePath = public_path('video/vd/test.html');
 
         // Enregistrer le contenu du fichier Word en HTML
         $phpWord->save($htmlFilePath, 'HTML');
-          //dd($htmlFilePath);
-        $content="video/vd/test.html";
+        //dd($htmlFilePath);
+        $content = "video/vd/test.html";
 
+        $avocat = avocat::where("visible", 1)->with('publication')->findOrFail($id);
 
-        $avocat = avocat::with('publication')->findOrFail($id);
-
-        $bureau = avocat::with('bureau')->findOrFail($id);
-        $avocats = avocat::all();
+        $bureau = avocat::where("visible", 1)->with('bureau')->findOrFail($id);
+        $avocats = avocat::where("visible", 1)->get();
         // dd($bureau);
         $accueil = accueil::first();
         // $type=type::all();
@@ -216,7 +215,7 @@ class InfoController extends Controller
     {
         // $avocatBy=avocat::with('bureau')->where('fonction_id',$id)->simplePaginate();
         //
-        $avocatBy = avocat::with('fonction')->where('fonction_id', $id)->get();
+        $avocatBy = avocat::with('fonction')->where([['fonction_id', $id], ["visible", 1]])->get();
         //$avocat=fonction::with('avocat')->distinct()->get();
         //    $avocatBy = $avocatBy->groupBy(function ($member) {
         //        return $member->fonction->fonction;

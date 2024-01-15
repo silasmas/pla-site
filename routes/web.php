@@ -45,7 +45,6 @@ Route::group(
             return view('cv', ['htmlFilePath' => 'video/CV_Me_Lionnel.html']);
         })->name('cv');
 
-
     });
 
 Route::middleware(['auth'])->group(function () {

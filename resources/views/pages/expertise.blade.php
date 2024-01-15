@@ -14,12 +14,13 @@
         <div class="block_5">
             <div class="container">
                 <div class="row g-lg-5 g-5">
-                    <div class="col-lg-6 col-separator">
+                    {{-- col-separator --}}
+                    <div class="col-lg-5 ms-auto me-2 my-4 cardeExpertise one">
                         <div class="text-star">
                             <h1>@lang('info.expertises.menu')</h1>
                         </div>
                         {{-- {{ $loop->first?'col-separator':'' }} --}}
-                        <div class="row g-3 g-lg-4">
+                        <div class="row g-3 g-lg-4 ">
                             @forelse($secteur as $ex)
                             <div class="col-lg-6 col-md-6 col-6">
                                 <a href="{{ route('detailExpertise',['id'=>$ex->id,'p'=>$ex->titre1]) }}">
@@ -39,12 +40,12 @@
                             @endforelse
                         </div>
                     </div>
-                    <div class="col-lg-6">
+                    <div class="col-lg-5 ms-2 me-auto my-4 cardeExpertise">
                         <div class="text-star">
                             <h1>@lang('info.domaine.menu')</h1>
                         </div>
                         {{-- {{ $loop->first?'col-separator':'' }} --}}
-                        <div class="row g-3 g-lg-4">
+                        <div class="row g-3 g-lg-4 ">
                             @forelse($domaine as $ex)
                             <div class="col-lg-6 col-md-6 col-6">
                                 <a href="{{ route('detailCompetence',['id'=>$ex->id,'p'=>$ex->titre1]) }}">

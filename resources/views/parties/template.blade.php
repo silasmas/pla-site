@@ -31,6 +31,16 @@
   padding: 10px;
 
 }
+.cardeExpertise {
+  border: 2px solid #ccc; /* Ajouter une bordure de 2 pixels avec une couleur grise */
+  border-radius: 10px; /* Ajouter des coins arrondis à la bordure */
+  box-shadow: 3px 3px 5px #888; /* Ajouter une ombre portée */
+  padding: 10px;
+margin: -2px;
+}
+.one{
+margin-right: 0px;
+}
 iframe {
   /* overflow-y: scroll; Ajoute une barre de défilement verticale */
   scrollbar-width: thin; /* Définit l'épaisseur de la barre de défilement */
