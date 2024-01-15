@@ -84,7 +84,7 @@
         {{-- MODAL READ MORE END --}}
     </div>
     <div class="counter">
-        <img src="{{ asset('assets/images/img/baner.jpg') }}" alt="">
+        <img src="{{ asset('assets/images/img/ban.jpg') }}" alt="">
         <div class="container">
             <div class="text-center">
                 <h5>{{ !empty($about->titreNosValeurs) ? $about->titreNosValeurs : '' }}</h5>
