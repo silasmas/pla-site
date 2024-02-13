@@ -1124,6 +1124,21 @@ a{
     /* line-height: 32px; */
     padding-right: 50px;
 }
+.tab-content ul{
+    margin-top: 10px!important;
+}
+.tab-content ul li{
+    color: var(--secondayColor)!important;
+    font-weight: 500!important;
+    margin-bottom: 5px!important;
+}
+.MsoListParagraph{
+    margin-left: 40px!important;
+    color: var(--secondayColor)!important;
+    font-weight: 500!important;
+    margin-bottom: 5px!important;
+    line-height: 140%;
+}
 .block_3 .card{
     border: none;
     border-radius: 0;
