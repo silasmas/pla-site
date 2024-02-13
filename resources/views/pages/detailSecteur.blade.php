@@ -47,10 +47,10 @@
                                         <div>
                                             <div class="row mb-0 mt-4">
                                                 <div class="col-lg-12 col-md-12">
-                                                    <pre>
-                                                        {!! $se->contenu!!}
+                                                        <p>
+                                                            {!! $se->contenu!!}
 
-                                                    </pre>
+                                                        </p>
                                                 </div>
                                             </div>
 

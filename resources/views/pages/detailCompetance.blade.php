@@ -46,12 +46,12 @@
                                         <div>
                                             <div class="row mb-0 mt-4">
                                                 <div class="col-lg-12 col-md-12">
-                                                    {{-- <p> --}}
-                                                        <pre>
+                                                    <p>
+                                                        {{-- <pre> --}}
                                                             {!! $se->contenu!!}
 
-                                                        </pre>
-                                                    {{-- </p> --}}
+                                                        {{-- </pre> --}}
+                                                    </p>
                                                 </div>
                                             </div>
 
