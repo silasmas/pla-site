@@ -2774,10 +2774,10 @@ color: var(--primaryColor);
 /* .block_10 p{
     line-height: 35px;
 } */
-.block_10 p::first-letter{
+/* .block_10 p::first-letter{
     font-size: 25px;
     color: var(--secondayColor);
-}
+} */
 .block_10 .card-exp {
     background: #fafbfe;
     border: none;
