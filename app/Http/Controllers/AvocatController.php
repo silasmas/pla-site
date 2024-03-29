@@ -97,9 +97,9 @@ class AvocatController extends Controller
             'sexe' => 'required',
             'datenaissance' => 'required|min:3',
             'email' => 'required|min:3',
-            'biographie' => 'required|min:3',
             'photo' => 'required|sometimes|image',
         ]);
+        // 'biographie' => 'required|min:3',
         if ($por->passes()) {
             $file = $request->file('photo');
             $file == '' ? '' : ($filenameImg = 'galeri/' . time() . '.' . $file->getClientOriginalName());
