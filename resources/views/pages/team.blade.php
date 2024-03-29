@@ -20,12 +20,12 @@
 
                         </div>
                     </div>
-                    <div class="col-lg-8">
+                    {{-- <div class="col-lg-8">
                         @if (!empty($accueil->descriptionTeam ))
                         <p class="">{{ $accueil->descriptionTeam }}</p>
                         @endif
 
-                    </div>
+                    </div> --}}
                 </div>
 
 
