@@ -109,19 +109,21 @@ class AvocatController extends Controller
             $pdfbio == '' ? $pdfbioname = null : ($pdfbioname = 'pdfbio/' . time() . '.' . $pdfbio->getClientOriginalName());
             $pdfbio == '' ? '' : $pdfbio->move('storage/pdfbio', $pdfbioname);
 
-            $bio_fr = $request->file('biographie');
-            $phpWord = IOFactory::load($bio_fr);
-            $bio_fr == '' ? $bio_frname = null : ($bio_frname = 'biographie/' . time() . '.html');
-            // Enregistrer le contenu du fichier Word en HTML
-            $phpWord->save('storage/' . $bio_frname, 'HTML');
-            //$bio_fr == '' ? '' : $bio_fr->move('storage/biographie', $bio_frname);
+            if ($request->file('biographie')) {
+                $bio_fr = $request->file('biographie');
+                $phpWord = IOFactory::load($bio_fr);
+                $bio_fr == '' ? $bio_frname = null : ($bio_frname = 'biographie/' . time() . '.html');
+                // Enregistrer le contenu du fichier Word en HTML
+                // $phpWord->save('storage/' . $bio_frname, 'HTML');
+                //$bio_fr == '' ? '' : $bio_fr->move('storage/biographie', $bio_frname);
 
-            $bio_en = $request->file('biographie_en');
-            $phpWorden = IOFactory::load($bio_en);
-            $bio_en == '' ? $bio_enname = null : ($bio_enname = 'biographie/en' . time() . '.html');
-            // Enregistrer le contenu du fichier Word en HTML
-            $phpWorden->save('storage/' . $bio_enname, 'HTML');
-            //$bio_en == '' ? '' : $bio_en->move('storage/biographie', $bio_enname);
+                $bio_en = $request->file('biographie_en');
+                $phpWorden = IOFactory::load($bio_en);
+                $bio_en == '' ? $bio_enname = null : ($bio_enname = 'biographie/en' . time() . '.html');
+                // Enregistrer le contenu du fichier Word en HTML
+                $phpWorden->save('storage/' . $bio_enname, 'HTML');
+                //$bio_en == '' ? '' : $bio_en->move('storage/biographie', $bio_enname);
+            }
             if ($request->photo) {
                 // dd(['fr' => $bio_frname, 'en' => $bio_enname]);
                 avocat::create([
