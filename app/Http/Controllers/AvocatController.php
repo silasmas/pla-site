@@ -123,6 +123,9 @@ class AvocatController extends Controller
                 // Enregistrer le contenu du fichier Word en HTML
                 $phpWorden->save('storage/' . $bio_enname, 'HTML');
                 //$bio_en == '' ? '' : $bio_en->move('storage/biographie', $bio_enname);
+            } else {
+                $bio_frname = "";
+                $bio_enname = "";
             }
             if ($request->photo) {
                 // dd(['fr' => $bio_frname, 'en' => $bio_enname]);
