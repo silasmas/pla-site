@@ -25,7 +25,7 @@ p{
     font-family: 'Mulish', sans-serif!important;
     color: var(--colorTextParagraph);
 }
-p span{
+p span, p font{
     font-family: 'Mulish', sans-serif!important;
 }
 a{
