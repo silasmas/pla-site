@@ -25,12 +25,10 @@ p{
     font-family: 'Mulish', sans-serif!important;
     color: var(--colorTextParagraph);
 }
-p span, p font{
+p span, p font, li font{
     font-family: 'Mulish', sans-serif!important;
 }
-font{
-    color: red!important;
-}
+
 a{
     color: inherit;
     text-decoration: none;
