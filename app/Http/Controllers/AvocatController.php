@@ -204,10 +204,7 @@ class AvocatController extends Controller
         // dd($line);
         if ($line) {
             $file = $request->file('photo');
-            $file == ''
-            ? ''
-            : ($filenameImg =
-                'galerie/' . time() . '.' . $file->getClientOriginalName());
+            $file == '' ? '' : ($filenameImg = 'galerie/' . time() . '.' . $file->getClientOriginalName());
             $file == '' ? '' : $file->move('storage/galerie', $filenameImg);
 
             $pubpdf = $request->file('pdfbio');
@@ -215,8 +212,8 @@ class AvocatController extends Controller
             $pubpdf == '' ? '' : $pubpdf->move('storage/pdfbio', $pubpdfnam);
 
             $bio_fr = $request->file('biographie');
-            $bio_fr == '' ? "" : $phpWord = IOFactory::load($bio_fr);
-            $bio_fr == '' ? $phpWord = null : ($bio_frname = 'biographie/' . time() . '.html');
+            $bio_fr == '' || null ? "" : $phpWord = IOFactory::load($bio_fr);
+            $bio_fr == '' || null ? $phpWord = null : ($bio_frname = 'biographie/' . time() . '.html');
             // $bio_fr == '' ? $bio_frname = null : ($bio_frname = 'biographie/' . time() . '.html');
             // Créer un objet Writer pour la sauvegarde
             $bio_fr == '' ? "" : $objWriterfr = IOFactory::createWriter($phpWord, 'HTML');
@@ -225,8 +222,8 @@ class AvocatController extends Controller
             //$bio_fr == '' ? '' : $bio_fr->move('storage/biographie', $bio_frname);
 
             $bio_en = $request->file('biographie_en');
-            $bio_en == '' ? "" : $phpWorden = IOFactory::load($bio_en);
-            $bio_en == '' ? $bio_enname = null : ($bio_enname = 'biographie/en' . time() . '.html');
+            $bio_en == '' || null ? "" : $phpWorden = IOFactory::load($bio_en);
+            $bio_en == '' || null ? $bio_enname = null : ($bio_enname = 'biographie/en' . time() . '.html');
             // Créer un objet Writer pour la sauvegarde
             $bio_en == '' ? "" : $objWriter = IOFactory::createWriter($phpWorden, 'HTML');
             // Enregistrer le contenu du fichier Word en HTML
