@@ -317,8 +317,7 @@
                                                                                 <textarea name="biographie_en" class="summernote" rows="12"
                                                                                     data-parsley-trigger="change" required
                                                                                     aria-required="true">
-                                                                                    {{ isset($avocat)?$avocat->getTranslation('
-                                                                                    biographie','en'):'' }} </textarea>
+                                                                                    {{ isset($avocat)?$avocat->getTranslation('biographie','en'):'' }} </textarea>
 
                                                                                 {{-- <div class=" fileinput fileinput-new input-group"
                                                                                     data-provides="fileinput">
