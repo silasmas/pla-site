@@ -37,13 +37,13 @@
                                 @endempty
                                 <h2>@lang('info.team.bio')</h2>
 
-                                {{-- <p>{!! $avocat->biographie !!}</p> --}}
                                 @if ($avocat->biographie)
-                                <div>
+                                <p>{!! $avocat->biographie !!}</p>
+                                {{-- <div>
                                     <iframe class="iframe-custom" id="iframe-example" frameborder="0" onload="10"
                                         src="{{ asset('storage/'.$avocat->biographie) }}" allowfullscreen seamless
                                         sandbox></iframe>
-                                </div>
+                                </div> --}}
                                 @else
                                 <p class="text-danger">@lang('info.titrepage.videInfo')</p>
                                 @endif

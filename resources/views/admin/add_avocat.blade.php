@@ -287,13 +287,13 @@
                                                                     </div>
                                                                     <div class=" col-sm-12 form-group">
                                                                         <label>Description (Française)</label>
-                                                                        {{-- <textarea name="biographie"
+                                                                        <textarea name="biographie"
                                                                             class="summernote" rows="12"
                                                                             data-parsley-trigger="change" required
                                                                             aria-required="true">
                                                                                 {{ isset($avocat)?$avocat->biographie:'' }}
-                                                                            </textarea> --}}
-                                                                        <div class=" fileinput fileinput-new input-group"
+                                                                            </textarea>
+                                                                        {{-- <div class=" fileinput fileinput-new input-group"
                                                                             data-provides="fileinput">
                                                                             <div class="form-control"
                                                                                 data-trigger="fileinput">
@@ -310,17 +310,17 @@
                                                                                 <input type="file" name="biographie"
                                                                                     {{isset($avocat)?'':'requiredaria-required="true"' }}></span>
                                                                             <a href="#" class="input-group-addon btn btn-default fileinput-exists" data-dismiss="fileinput">Supprimer</a>
-                                                                        </div>
+                                                                        </div> --}}
                                                                      </div>
                                                                     <div class=" col-sm-12 form-group">
                                                                             <label>Description (Anglaise)</label>
-                                                                                {{-- <textarea name="biographie_en" class="summernote" rows="12"
+                                                                                <textarea name="biographie_en" class="summernote" rows="12"
                                                                                     data-parsley-trigger="change" required
                                                                                     aria-required="true">
                                                                                     {{ isset($avocat)?$avocat->getTranslation('
                                                                                     biographie','en'):'' }} </textarea>
-                                                                                --}}
-                                                                                <div class=" fileinput fileinput-new input-group"
+
+                                                                                {{-- <div class=" fileinput fileinput-new input-group"
                                                                                     data-provides="fileinput">
                                                                                     <div class="form-control"
                                                                                         data-trigger="fileinput">
@@ -338,7 +338,7 @@
                                                                                         <input type="file" name="biographie_en"
                                                                                             {{isset($avocat)?'':'requiredaria-required="true"' }}></span>
                                                                                         <a href="#" class="input-group-addon btn btn-default fileinput-exists" data-dismiss="fileinput">Supprimer</a>
-                                                                                    </div>
+                                                                                    </div> --}}
                                                                     </div>
                                                                         <div
                                                                             class="col-lg-offset-3 col-lg-6 col-sm-12 form-group">
