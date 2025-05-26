@@ -137,7 +137,8 @@ iframe {
 <script src="{{asset('assets/js/isotope.pkgd.min.js')}}"></script>
 <script src="{{ asset('assets/js/owl.carousel.min.js') }}"></script>
 <script src="{{ asset('assets/js/scriptcarousel.js') }}"></script>
-<script async src='https://stackwhats.com/pixel/4958f4367609133da9d63d60b8f3ca'></script>
+{{-- <script async src='https://stackwhats.com/pixel/4958f4367609133da9d63d60b8f3ca'></script> --}}
+@yield("autres_script")
 
 
 <!-- Google tag (gtag.js) -->
@@ -151,7 +152,7 @@ iframe {
 </script>
 
 
-@yield("autres_script")
+
     <script>
 //         if (document.querySelector('.js-read-more')) {
 //   ReadMore.init();
