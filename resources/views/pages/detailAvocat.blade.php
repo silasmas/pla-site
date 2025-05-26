@@ -167,7 +167,7 @@
           $(".btn-download").click(function(e) {
             e.preventDefault();
             var data = $(this).attr('id');
-alert('test');
+
             $.ajax({
                 type: 'GET',
                 url: '../downloadCv',
