@@ -171,6 +171,8 @@
 @section('autres_script')
 
 <script type="text/javascript">
+
+alert("test");
     function resizeIframe() {
         var iframe = document.getElementById('iframe-example');
         iframe.style.height = iframe.contentWindow.document.body.scrollHeight + 'px';
